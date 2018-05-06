@@ -1,5 +1,11 @@
-# This is a **git** useage tutorial
+# Code Louisville Front End Web Development Final Project, May 2018 Course
 
-[TOC]
+The following is the final project for the above listed course.
 
-The cake is a lie!
+The initial landing page (index.html) contains all of the requirements listed in the [Student Resource Wiki](https://github.com/CodeLouisville/Student-Resources/wiki/Front-End-Web-Development-Project-Requirements).
+
+The project will be hosted on GitHub Pages and will contain nothing but HTML/CSS/Javascript. It will be broken down into several modules. Besides the initial page the modules will contain additional code for various other "projects".
+
+***More to come as project develops***
+
+Daniel C Landon Jr
