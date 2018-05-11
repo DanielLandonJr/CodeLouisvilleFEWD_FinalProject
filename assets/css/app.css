@@ -12,91 +12,90 @@ body {
 .u_text-50 { font-size: .5rem; }
 .u_text-75 { font-size: .75rem; }
 
-/* media query breakpoints based on material.io design from goolge
-These do not effect the design layout, only the little squares on top of the page. */
+/* media query breakpoints based on material.io design from google
+These do not effect the design layout, only used to demo media breaks on page. */
 
-@media (min-width: 359px) {
-  .mediaBreak359 {
-    color: white;
-    background-color: #673ab7;
-  }
+@media screen and (max-width: 359px) {
+  /* hide the monkey logo in the nav bar...otherwise it throws off the text */
   .hideTheMonkey {
     display: none;
   }
-
 }
-@media (min-width: 399px) {
+@media screen and (min-width: 359px) {
+  .mediaBreak359 {
+    color: #ffffff;
+    background-color: #673ab7;
+  }
+}
+@media screen and (min-width: 399px) {
   .mediaBreak399 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 479px) {
+@media screen and (min-width: 479px) {
   .mediaBreak479 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 599px) {
+@media screen and (min-width: 599px) {
   .mediaBreak599 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 719px) {
+@media screen and (min-width: 719px) {
   .mediaBreak719 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 839px) {
+@media screen and (min-width: 839px) {
   .mediaBreak839 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 959px) {
+@media screen and (max-width: 959px) {
+  /* hide stats and counter...it blocks the content */
+  #stats, .count-particles {
+    display: none;
+  }
+}
+@media screen and (min-width: 959px) {
   .mediaBreak959 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }  
 }
-@media (min-width: 1023px) {
+@media screen and (min-width: 1023px) {
   .mediaBreak1023 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 1279px) {
+@media screen and (min-width: 1279px) {
   .mediaBreak1279 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 1439px) {
+@media screen and (min-width: 1439px) {
   .mediaBreak1439 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 1599px) {
+@media screen and (min-width: 1599px) {
   .mediaBreak1599 {
-    color: white;
+    color: #ffffff;
     background-color: #673ab7;
   }
-  
 }
-@media (min-width: 1600px) {
-  .mediaBreak1600+ {
-    color: white;
+@media screen and (min-width: 1600px) {
+  .mediaBreak1600Up {
+    color: #ffffff;
     background-color: #673ab7;
   }
 }
