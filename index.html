@@ -36,6 +36,55 @@
         </a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
+          <li><a href="./index.html">Home</a></li>
+          <li>
+            <a class="dropdown-button" href="#!" data-activates="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="./assets/media/img/starrynightwallpaper3.jpg">
+              </div>
+              <a href="#!user"><img class="circle" src="./assets/media/img/forgeApes_512_BASE.svg"></a>
+              <a href="#!name"><span class="white-text name">Daniel C. Landon Jr.</span></a>
+              <a href="#!email"><span class="white-text email">daniel.landon@forge-apes.com</span></a>
+            </div>
+          </li>
+          <li><a href="./index.html">Home</a></li>          
+          <li class="divider"></li>         
+          <li class="divider"></li>
+          <li>
+            <a class="dropdown-button" href="#!" data-activates="dropdown2">Projects<i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+        </ul>
+        <!-- three seperate dropdown menus for the same links...
+        if i dont use one for each location, main menu, bottom menu, and sidenav menu the first two dont work only the last one -->
+        <ul id="dropdown1" class="dropdown-content z-depth-1">
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+          <li><a href="#!">Link 5</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content z-depth-1">
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+          <li><a href="#!">Link 5</a></li>
+        </ul>
+        <ul id="dropdown3" class="dropdown-content z-depth-1">
+          <li><a href="#!">Link 1</a></li>
+          <li><a href="#!">Link 2</a></li>
+          <li><a href="#!">Link 3</a></li>
+          <li><a href="#!">Link 4</a></li>
+          <li><a href="#!">Link 5</a></li>
+        </ul>
+        <!-- <ul class="right hide-on-med-and-down">
           <li><a href="#">Link 1</a></li>
           <li><a href="#">Link 2</a></li>
           <li><a href="#">Link 3</a></li>
@@ -48,7 +97,7 @@
           <li><a href="#">Link 3</a></li>
           <li><a href="#">Link 4</a></li>
           <li><a href="#">Link 5</a></li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
   </div>
@@ -76,7 +125,7 @@
     <div class="row center white z-depth-1">
       <h6>Content Goes Here</h6>
       <span>
-        <img style='width:100%; max-width:512px;' src="./assets/media/img/forgeApes_512_BASE.svg">
+        <img style='width:100%; max-width:384px;' src="./assets/media/img/forgeApes_512_BASE.svg">
       </span>
       <h6>Content Goes Here</h6>
     </div>
@@ -97,14 +146,18 @@
             <p class="grey-text text-lighten-4">Code Louisville, Front End Web Development Final Project.</p>
             <p>Class May 2018.</p>
           </div>
-          <div class="col l4 offset-l2 s12">
+          <div class="col offset-l2">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
+              <li>
+                <a class="dropdown-button" href="#!" data-activates="dropdown3">Projects<i class="material-icons right">arrow_drop_down</i>
+                </a>
+              </li>
+              <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
               <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 5</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 5</a></li> -->
             </ul>
           </div>
         </div>

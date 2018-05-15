@@ -1,6 +1,9 @@
 $( document ).ready(function(){
   // side nav
   $(".button-collapse").sideNav();
+
+  // drop down menu
+  $(".dropdown-button").dropdown();
 });
 
 (() => { // iife start
