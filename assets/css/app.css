@@ -29,8 +29,14 @@ body {
 }
 
 /* utilities */
-.u_text-50 { font-size: .5rem; }
+.u_text-25 { font-size: .25rem; }
+.u_text-50 { font-size: .50rem; }
 .u_text-75 { font-size: .75rem; }
+.u_text-125 { font-size: 1.25rem; }
+.u_text-150 { font-size: 1.50rem; }
+.u_text-175 { font-size: 1.75rem; }
+
+.u_margin-right_50 { margin: .50rem; }
 
 /* media query breakpoints based on material.io design from google
 These do not effect the design layout, only used to demo media breaks on page. */

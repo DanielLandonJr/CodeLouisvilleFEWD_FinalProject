@@ -8,7 +8,6 @@
   <!-- links -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="./assets/extMods/materialize/css/materialize.min.css" media="screen,projection">
-  <link rel="stylesheet" href="./assets/css/required.css">
   <link rel="stylesheet" href="./assets/css/app.css">
   <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
   <!-- links -->
@@ -34,7 +33,9 @@
             </span>
             forge apes
         </a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
         <ul class="right hide-on-med-and-down">
           <li><a href="./index.html">Home</a></li>
           <li>
@@ -106,7 +107,7 @@
   <!-- start main -->
   <div class="main container">
     <div class="row "></div> <!-- extra space at the top -->
-    <div title ='Changes color to show Media Query Breaks.' class="row center">
+    <div class="row center tooltipped" data-position="top" data-delay="100" data-tooltip="If Purple, screen is larger, in  pixels, than number displayed.">
       <div class="col s2 z-depth-1 mediaBreak359">0359</div>
       <div class="col s2 z-depth-1 mediaBreak399">0399</div>
       <div class="col s2 z-depth-1 mediaBreak479">0479</div>
@@ -125,7 +126,7 @@
     <div class="row center white z-depth-1">
       <h6>Content Goes Here</h6>
       <span>
-        <img class='responsive-img' style='max-width:384px;' src="./assets/media/img/forgeApes_512_BASE.svg">
+        <img style='width: 100%; max-width:384px;' src="./assets/media/img/forgeApes_512_BASE.svg">
       </span>
       <h6>Content Goes Here</h6>
     </div>
@@ -151,7 +152,7 @@
             <ul>
               <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
               <li>
-                <a class="dropdown-button white-text" href="#!" data-activates="dropdown3">Projects<i class="material-icons right">arrow_drop_down</i>
+                <a class="dropdown-button grey-text text-lighten-3" href="#!" data-activates="dropdown3">Projects<i class="material-icons right">arrow_drop_down</i>
                 </a>
               </li>
               <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
@@ -178,7 +179,6 @@
   <script src='./assets/extMods/materialize/js/materialize.min.js'></script>
   <script src='./assets/extMods/particlesJS/particles.js'></script>
   <script src='./assets/extMods/particlesJS/demo/js/lib/stats.js'></script>
-  <script src='./assets/js/required.js'></script>
   <script src='./assets/js/app.js'></script>
   <script>
   </script>
