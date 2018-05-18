@@ -20,8 +20,8 @@ This is the final project needed to complete the Code Louisville course. The lan
 ## The following are pointers to project requirements.
 
 ### Responsive Design
-  - Site is good down to about 220 pixels.
-  - sideNav is 215 pixels wide. Anything below that and the only way to get the nav to disappear is to select a nav option.
+  - Site is good down to about 230 pixels.
+  - sideNav is 230 pixels wide. Anything below that and the only way to get the nav to disappear is to select a nav option.
   - even with sidenav issues site is still functional (basic layout at least), however the layout/formating goes out the window.
 
 ### CSS
