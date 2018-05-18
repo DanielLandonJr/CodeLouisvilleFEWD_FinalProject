@@ -1,6 +1,8 @@
 $( document ).ready(function(){
   // side nav
-  $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav({
+    menuWidth: 215
+  });
 
   // drop down menu
   $(".dropdown-button").dropdown();
