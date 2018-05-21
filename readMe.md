@@ -11,7 +11,7 @@
 This is the final project needed to complete the Code Louisville course. The landin page will contain all of the ["requirements"](https://github.com/CodeLouisville/Student-Resources/wiki/Front-End-Web-Development-Project-Requirements) necessary for projec to be considered complete (based on requirements docs link above).
 
 - I will continue to develop other projects and include them with this project as seperate pages. Extra stuff to show my ***kung-fu*** is strong.
-- Will use materialze css/js for build layout. (Newer version is available that does not require jQuery, however it is kinda flakey).
+- Will use materialze css/js for build layout. (Newer version is available that does not require jQuery, however it is kinda flakey).git checkout
 - Where possible css/javascript files, for external libraries, are included in the project. I tried to avoid using external references, where possible, for security reasons.
 - .nomedia files were included in all folders (make sure empty folders were included in repo).
 

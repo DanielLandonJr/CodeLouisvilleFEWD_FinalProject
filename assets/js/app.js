@@ -1,3 +1,5 @@
+const http = new EasyHTTP;
+
 $( document ).ready(function(){
   // side nav
   $(".button-collapse").sideNav({
@@ -5,8 +7,35 @@ $( document ).ready(function(){
   });
 
   // drop down menu
-  $(".dropdown-button").dropdown();
+  $(".dropdown-button").dropdown({
+    constrainWidth: false
+  });
+
+  $('#contentGoesHere').load('../../modules/localization/localization.html');
 });
+
+(() => {
+  const dropMenuClick = (event) => {
+    console.log(event.target.innerText);
+    switch(event.target.innerText) {
+      case "Localization":
+        $('#contentGoesHere').detach;
+        $('#contentGoesHere').load('../../modules/localization/localization.html');
+        break;
+      case "Weather Underground":
+        $('#contentGoesHere').detach;
+        $('#contentGoesHere').load('../../modules/weatherUnderground/weather.html');
+        break;
+    }
+  };
+  
+  document.querySelector('#dropdown1').addEventListener('click', dropMenuClick);
+  
+  document.querySelector('#dropdown2').addEventListener('click', dropMenuClick);
+  
+  document.querySelector('#dropdown3').addEventListener('click', dropMenuClick);
+  
+})();
 
 (() => { // iife start
 
