@@ -17,6 +17,9 @@ let Weather_Storage_Ctrl = (() => {
         // localstorage empty, set to default values
         city = defaultCity;
         state = defaultState;
+
+        // call this t oset lcoation to local storage
+        Weather_Storage_Ctrl.setLocationData(city, state);
       } else {
         locationData = JSON.parse(localStorage.getItem('weatherUnderGround'));
         city = locationData.city;
