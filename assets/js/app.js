@@ -11,7 +11,7 @@ $( document ).ready(function(){
     constrainWidth: false
   });
 
-  $('#contentGoesHere').load('../../modules/localization/localization.html');
+  $('#contentGoesHere').load('../modules/localization/localization.html');
 });
 
 (() => {
@@ -19,12 +19,10 @@ $( document ).ready(function(){
     console.log(event.target.innerText);
     switch(event.target.innerText) {
       case "Localization":
-        $('#contentGoesHere').detach;
-        $('#contentGoesHere').load('../../modules/localization/localization.html');
+        $('#contentGoesHere').load('../modules/localization/localization.html');
         break;
       case "Weather Underground":
-        $('#contentGoesHere').detach;
-        $('#contentGoesHere').load('../../modules/weatherUnderground/weather.html');
+        $('#contentGoesHere').load('../modules/weatherUnderground/weather.html');
         break;
     }
   };
