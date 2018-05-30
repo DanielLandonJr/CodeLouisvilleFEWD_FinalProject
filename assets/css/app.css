@@ -13,21 +13,6 @@ body {
   z-index: -2;
 }
 
-.translate {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.changeFont {
-  font-size: 2rem;
-  font-family: 'Berkshire Swash', cursive;
-}
-
-.changeFont::first-letter {
-  font-size: 2.5rem;
-  color: purple;
-}
-
 /* utilities */
 .u_text-25 { font-size: .25rem; }
 .u_text-50 { font-size: .50rem; }

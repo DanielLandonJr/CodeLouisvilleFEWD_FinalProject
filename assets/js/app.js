@@ -1,5 +1,3 @@
-const http = new EasyHTTP;
-
 $( document ).ready(function(){
   // side nav
   $(".button-collapse").sideNav({
@@ -11,7 +9,7 @@ $( document ).ready(function(){
     constrainWidth: false
   });
 
-  $('#contentGoesHere').load('../modules/localization/localization.html');
+  // $('#contentGoesHere').load('../modules/localization/localization.html');
 });
 
 (() => {
