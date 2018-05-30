@@ -28,69 +28,59 @@
   <div id='particles-js'></div>
 
   <!-- start header -->
-  <div class="header">  
+  <div class="header">
     <nav>
       <div class="nav-wrapper purple">
         <a id="brand" href="#!" class="brand-logo">
-            <span>
-              <img class='shrinkTheMonkey' src="./assets/media/img/forgeApes_512_BASE.svg">
-            </span>
-            forge apes
-        </a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse">
-          <i class="material-icons">menu</i>
-        </a>
+          <span>
+            <img src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px" alt="" class="shrinkTheMonkey">
+          </span>forge apes</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="./index.html">Home</a></li>
+          <li><a id="homeBtn1" href="#!"><i class="material-icons">home</i></a></li>
+          
+          <!-- Dropdown Trigger -->
           <li>
-            <a class="dropdown-button" href="#!" data-activates="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i>
-            </a>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
           </li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li>
-            <div class="user-view">
-              <div class="background">
-                <img class='responsive-img' src="./assets/media/img/starrynightwallpaper3.jpg">
-              </div>
-              <a href="#!user"><img class="circle" src="./assets/media/img/forgeApes_512_BASE.svg"></a>
-              <a href="#!name"><span class="white-text name">Daniel C. Landon Jr.</span></a>
-              <a href="#!email"><span class="white-text email">daniel.landon@forge-apes.com</span></a>
-            </div>
-          </li>
-          <li><a href="./index.html">Home</a></li>          
-          <li class="divider"></li>         
-          <li class="divider"></li>
-          <li>
-            <a class="dropdown-button" href="#!" data-activates="dropdown2">Projects<i class="material-icons right">arrow_drop_down</i>
-            </a>
-          </li>
-        </ul>
-        <!-- three seperate dropdown menus for the same links...
-        if i dont use one for each location, main menu, bottom menu, and sidenav menu the first two dont work only the last one -->
-        <ul id="dropdown1" class="dMenu dropdown-content z-depth-1">
-          <li><a href="#!">Localization</a></li>
-          <li><a href="#!">Weather Underground</a></li>
-          <li><a href="#!">Link 3</a></li>
-          <li><a href="#!">Link 4</a></li>
-          <li><a href="#!">Link 5</a></li>
-        </ul>
-        <ul id="dropdown2" class="dMenu dropdown-content z-depth-1">
-          <li><a href="#!">Localization</a></li>
-          <li><a href="#!">Weather Underground</a></li>
-          <li><a href="#!">Link 3</a></li>
-          <li><a href="#!">Link 4</a></li>
-          <li><a href="#!">Link 5</a></li>
-        </ul>
-        <ul id="dropdown3" class="dMenu dropdown-content z-depth-1">
-          <li><a href="#!">Localization</a></li>
-          <li><a href="#!">Weather Underground</a></li>
-          <li><a href="#!">Link 3</a></li>
-          <li><a href="#!">Link 4</a></li>
-          <li><a href="#!">Link 5</a></li>
         </ul>
       </div>
     </nav>
+    
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Weather Underground</a></li>
+      <li><a href="#!">Language Localization</a></li>
+      <li><a href="#!">Project 3</a></li>
+      <li><a href="#!">Project 4</a></li>
+      <li><a href="#!">Project 5</a></li>
+    </ul>
+  
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img class="responsive-img" src="./assets/media/img/starrynightwallpaper3.jpg">
+          </div>
+          <a href="#user">
+            <img class="circle white" src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px">
+          </a>
+          <a href="#name">
+            <span class="white-text name">Daniel C. Landon Jr.</span>
+          </a>
+          <a href="#email">
+            <span class="white-text email">daniel.landonjr@gmail.com</span>
+          </a>
+        </div>
+      </li>
+      <li><a id="homeBtn2" class="waves-effect" href="#!"><i class="material-icons">home</i></a></li>
+      <li><div class="divider"></div></li>
+          
+      <!-- Dropdown Trigger -->
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+      </li>
+    </ul>
   </div>
   <!-- end header -->
 
@@ -114,11 +104,11 @@
     </div>
 
     <div id="contentGoesHere" class="row center white z-depth-1">
-      <h6>Content Goes Here</h6>
+      <!-- <h6>Content Goes Here</h6>
       <span>
         <img style='width: 100%; max-width:384px;' src="./assets/media/img/forgeApes_512_BASE.svg">
       </span>
-      <h6>Content Goes Here</h6>
+      <h6>Content Goes Here</h6> -->
     </div>
   </div>
   <!-- end main -->
@@ -140,10 +130,11 @@
           <div class="col offset-l2">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
+              <li><a id="homeBtn3" class="grey-text text-lighten-3" href="#!">Home</a></li>
+          
+              <!-- Dropdown Trigger -->
               <li>
-                <a class="dropdown-button grey-text text-lighten-3" href="#!" data-activates="dropdown3">Projects<i class="material-icons right">arrow_drop_down</i>
-                </a>
+                <a class="dropdown-trigger grey-text text-lighten-3" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
               </li>
             </ul>
           </div>
@@ -158,9 +149,7 @@
     </footer>
   </div>
   <!-- end footer -->
-
   
-  <!-- script tags -->
   <script src='./assets/extMods/jQuery/jquery-3.3.1.min.js'></script>
   <!-- <script src='./assets/extMods/materialize/js/materialize.min.js'></script> -->
 
@@ -169,7 +158,7 @@
 
   <script src='./assets/extMods/particlesJS/particles.js'></script>
   <script src='./assets/extMods/particlesJS/demo/js/lib/stats.js'></script>
-  <script src='./assets/js/app.js'></script>
-  <!-- script tags -->
+  <!-- <script src='./assets/js/app.js'></script> -->
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
-</html>
+</html> 

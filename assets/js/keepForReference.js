@@ -12,6 +12,11 @@ $( document ).ready(function(){
   // $('#contentGoesHere').load('../modules/localization/localization.html');
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems);
+});
+
 (() => {
   const dropMenuClick = (event) => {
     console.log(event.target.innerText);

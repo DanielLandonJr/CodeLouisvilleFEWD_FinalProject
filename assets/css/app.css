@@ -41,7 +41,7 @@ These do not effect the design layout, only used to demo media breaks on page. *
   }
 
   /* change text size of brand logo text */
-  #brand {
+  #brand{
     font-size: 1.25rem;
   }
 }
