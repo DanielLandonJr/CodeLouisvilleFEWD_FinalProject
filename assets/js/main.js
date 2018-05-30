@@ -10,35 +10,10 @@ const Main = (() => {
     let xDropDownInstances = M.Dropdown.init(xDropDown, {
       constrainWidth: false
     });
-
-    // load default content
-    $('#contentGoesHere').load('./default.html');
-  });
-
-  const setEventListeners = () => {
-    document.querySelector('#homeBtn1').addEventListener('click', dropDownMenuClick);
-    document.querySelector('#homeBtn2').addEventListener('click', dropDownMenuClick);
-    document.querySelector('#homeBtn3').addEventListener('click', dropDownMenuClick);
-    document.querySelector('#dropdown1').addEventListener('click', dropDownMenuClick);
-  };
-
-  const dropDownMenuClick = (event) => {
-    let eventTarget = String(event.target.innerText).toLowerCase();
     
-    switch(eventTarget) {
-      case 'home':
-        $('#contentGoesHere').load('./default.html');
-        break;
-      case "language localization":
-        console.log(eventTarget);
-        $('#contentGoesHere').load('../modules/languageLocalization/index.html');
-        break;
-      case "weather underground":
-        console.log(eventTarget);
-        $('#contentGoesHere').load('../modules/weatherUnderground/index.html #mainContent');
-        break;
-    }
-  }
+    var xToolTip = document.querySelectorAll('.tooltipped');
+    var xToolTipInstances = M.Tooltip.init(xToolTip);
+  });
 
   const setupParticles = () => {
     particlesJS('particles-js', 
@@ -136,7 +111,7 @@ const Main = (() => {
 
       setupStats();
 
-      setEventListeners();
+      // setEventListeners();
 
     }
   }

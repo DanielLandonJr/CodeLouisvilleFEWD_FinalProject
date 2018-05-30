@@ -12,8 +12,9 @@ This is the final project needed to complete the Code Louisville course. The lan
 
 - I will continue to develop other projects and include them with this project as seperate pages. Extra stuff to show my ***kung-fu*** is strong.
 - Will use materialze css/js for build layout. (Newer version is available that does not require jQuery, however it is kinda flakey).git checkout
-- Where possible css/javascript files, for external libraries, are included in the project. I tried to avoid using external references, where possible, for security reasons.
 - .nomedia files were included in all folders (make sure empty folders were included in repo).
+
+I attempted to use a single index.html for all modules. I wanted to use AJAX and load the content section of the website when a user browsed to the module from navigation. Unfortunately I am having some issue with this. I will continue to look into this for possible change later.
 
 ***
 
