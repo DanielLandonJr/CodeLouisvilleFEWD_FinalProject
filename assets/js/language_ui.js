@@ -1,5 +1,5 @@
-let Localization_UI_Ctrl = (() => {
-
+export const UI = (() => {
+  // public methods
   return {
     loadUI: () => {
       // hide the loader
@@ -61,70 +61,3 @@ let Localization_UI_Ctrl = (() => {
     }
   }
 })();
-
-let LocalizationApp = ((Localization_UI_Ctrl) => {
-  let frontMatter = '';
-  let translations = '';
-  let characters = '';
-  let convertedData = '';
-  const http = new EasyHTTP;
-
-  const loadEventListeners = () => {
-    document.querySelector('#selectLanguage').addEventListener('change', languageChanged);
-  }
-
-  const languageChanged = (event) => {
-    console.log(event.target.value);
-    // convertedData array into seperate arrays
-    frontMatter = convertedData.filter((item) => item.frontMatter.language === event.target.value)
-    .map((item) => item.frontMatter);
-    translations = convertedData.filter((item) => item.frontMatter.language === event.target.value)
-      .map((item) => item.translations);
-    characters = convertedData.filter((item) => item.frontMatter.language === event.target.value)
-    .map((item) => item.characters);
-
-    if (event.target.value === 'English') {
-      // english selected. will reset interface
-      Localization_UI_Ctrl.paintUI(frontMatter, translations, 'default');
-    } else {
-      Localization_UI_Ctrl.paintUI(frontMatter, translations, 'translations');
-
-      // there are characters assoicated with the translation
-      if (frontMatter[0].characters) {
-        Localization_UI_Ctrl.paintUI(frontMatter, characters, 'characters');
-      }
-    }
-
-  }
-
-  const dataLoaded = (data) => {
-    // convert data array into seperate arrays
-    frontMatter = data.filter((item) => item.frontMatter.language === 'English')
-    .map((item) => item.frontMatter);
-    translations = data.filter((item) => item.frontMatter.language === 'English')
-      .map((item) => item.translations);
-    characters = data.filter((item) => item.frontMatter.language === 'English')
-    .map((item) => item.characters);
-    
-    Localization_UI_Ctrl.paintUI(frontMatter, translations, 'default');
-
-    Localization_UI_Ctrl.loadUI();
-  }
-
-  return {
-    init: () => {
-      loadEventListeners();
-
-      http.get('./modules/localization/localization.json')
-        .then((response) => { 
-          // convert json to array
-          convertedData = Object.keys(response).map((item) => { return response[item] });
-
-          dataLoaded(convertedData);
-        })
-        .catch((error) => console.log(error));
-    }
-  }
-})(Localization_UI_Ctrl);
-
-LocalizationApp.init();
