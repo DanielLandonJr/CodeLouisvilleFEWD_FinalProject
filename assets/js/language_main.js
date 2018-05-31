@@ -56,7 +56,10 @@ const ApplicationLocalization = (() => {
       http.easyHTTP.get('../assets/js/language.json')
         .then((response) => { 
           // convert json to array
+          console.log(response);
           convertedData = Object.keys(response).map((item) => { return response[item] });
+
+          console.log(convertedData);
 
           dataLoaded(convertedData);
         })
