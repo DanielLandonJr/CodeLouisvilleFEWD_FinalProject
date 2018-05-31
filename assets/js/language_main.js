@@ -1,5 +1,6 @@
 import * as UI_Ctrl from './language_ui.js';
 import * as http from './language_easyHTTP.js';
+import * as jData from './language.js';
 
 const ApplicationLocalization = (() => {
   let frontMatter = '';
@@ -53,17 +54,21 @@ const ApplicationLocalization = (() => {
     init: () => {
       loadEventListeners();
 
-      http.easyHTTP.get('../../assets/js/language.json')
-        .then((response) => {
-          // convert json to array
-          console.log(response);
-          convertedData = Object.keys(response).map((item) => { return response[item] });
+      console.log(jData.jData);
 
-          console.log(convertedData);
+      convertedData = Object.keys(jData.jData).map((item) => { return jData.jData[item] });
+      console.log(convertedData);
 
-          dataLoaded(convertedData);
-        })
-        .catch((error) => console.log(error));
+      dataLoaded(convertedData);
+
+      // http.easyHTTP.get('../../assets/js/language.json')
+      //   .then((response) => {
+      //     // convert json to array
+      //     convertedData = Object.keys(response).map((item) => { return response[item] });
+
+      //     dataLoaded(convertedData);
+      //   })
+      //   .catch((error) => console.log(error));
     }
   }
 })();
