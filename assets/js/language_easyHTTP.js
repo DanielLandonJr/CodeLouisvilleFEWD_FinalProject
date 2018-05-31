@@ -3,11 +3,10 @@ export const easyHTTP = (() => {
   return {
     // make get request
     get: async (url) => {
-      console.log(url);
       const response = await fetch(url);
-      console.log(response);
+      
       const resData = await response.json();
-      console.log(resData);
+      
       return resData;
   },
     // make post request
