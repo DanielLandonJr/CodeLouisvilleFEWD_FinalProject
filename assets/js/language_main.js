@@ -53,7 +53,7 @@ const ApplicationLocalization = (() => {
     init: () => {
       loadEventListeners();
 
-      http.easyHTTP.get('../assets/js/language.json')
+      http.easyHTTP.get('../../assets/js/language.json')
         .then((response) => {
           // convert json to array
           console.log(response);
