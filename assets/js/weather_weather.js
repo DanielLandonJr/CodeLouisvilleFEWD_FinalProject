@@ -5,7 +5,7 @@ export const Weather = (() => {
   return {
     // fetch the data from weather underground
     getWeather: async (city, state) => {
-      let fetchURL = `http://api.wunderground.com/api/${ API.apiKey() }/conditions/q/${ state }/${ city }.json`;
+      let fetchURL = `https://api.wunderground.com/api/${ API.apiKey() }/conditions/q/${ state }/${ city }.json`;
       
       const response = await fetch(fetchURL);
 
