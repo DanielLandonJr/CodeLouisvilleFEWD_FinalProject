@@ -54,10 +54,9 @@ const ApplicationLocalization = (() => {
     init: () => {
       loadEventListeners();
 
-      console.log(jData.jData);
+      // changed to loading json data as ajs module. I cant seem to get it to work on github pages as a json ajax clearInterval. need to work on this
 
       convertedData = Object.keys(jData.jData).map((item) => { return jData.jData[item] });
-      console.log(convertedData);
 
       dataLoaded(convertedData);
 
