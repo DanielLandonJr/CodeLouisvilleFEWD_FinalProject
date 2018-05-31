@@ -56,17 +56,6 @@ const WeatherUnderground = (() => {
   };
 
   const getWeather = (city, state) => {
-    // jQuery(document).ready(function($) {
-    //   $.ajax({
-    //   url : "http://api.wunderground.com/api/5a1b209e966659bb/geolookup/conditions/q/IA/Cedar_Rapids.json",
-    //   dataType : "jsonp",
-    //   success : function(parsed_json) {
-    //   var location = parsed_json['location']['city'];
-    //   var temp_f = parsed_json['current_observation']['temp_f'];
-    //   alert("Current temperature in " + location + " is: " + temp_f);
-    //   }
-    //   });
-    // });
     const weather = Weather_Ctrl.Weather.getWeather(location.city, location.state)
       .then((response) => {
         if (response !== undefined) {
