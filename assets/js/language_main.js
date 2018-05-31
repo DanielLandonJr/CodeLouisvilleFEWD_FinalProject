@@ -54,7 +54,7 @@ const ApplicationLocalization = (() => {
       loadEventListeners();
 
       http.easyHTTP.get('../assets/js/language.json')
-        .then((response) => { 
+        .then((response) => {
           // convert json to array
           convertedData = Object.keys(response).map((item) => { return response[item] });
 
