@@ -11,8 +11,13 @@ const Main = (() => {
       constrainWidth: false
     });
     
-    var xToolTip = document.querySelectorAll('.tooltipped');
-    var xToolTipInstances = M.Tooltip.init(xToolTip);
+    // initialize tooltips
+    // let xToolTip = document.querySelectorAll('.tooltipped');
+    // let xToolTipInstances = M.Tooltip.init(xToolTip);
+
+    // initialize collapsable ul
+    let xFunkyUL = document.querySelectorAll('.collapsible');
+    let xFunkyULiInstances = M.Collapsible.init(xFunkyUL);
   });
 
   const setupParticles = () => {
