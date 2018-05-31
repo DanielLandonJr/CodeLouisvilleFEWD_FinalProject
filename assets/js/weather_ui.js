@@ -7,7 +7,7 @@ export const UI = (() => {
       document.querySelector('#weather-location').textContent = weather.display_location.full;
       document.querySelector('#weather-description').textContent = weather.weather;
       document.querySelector('#weather-string').textContent = weather.temperature_string;
-      document.querySelector('#weather-icon').setAttribute('src', weather.icon_url);
+      // document.querySelector('#weather-icon').setAttribute('src', weather.icon_url);
       document.querySelector('#weather-time').textContent = new Date();
       document.querySelector('#weather-humidity').textContent = `Relative Humidity: ${ weather.relative_humidity }`;
       document.querySelector('#weather-dewPoint').textContent = `Dew Point: ${ weather.dewpoint_string }`;
