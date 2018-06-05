@@ -23,12 +23,16 @@ body {
 
 .u_margin-right_50 { margin: .50rem; }
 
+#brand {
+  padding-left: 0.5rem;
+}
+
 /* media query breakpoints based on material.io design from google
 These do not effect the design layout, only used to demo media breaks on page. */
 
 /* basic site layout (minus content) is good down to about 220 pixels. The side nav is 215 pixels wide, so anything below that and it will cover the entire screen. Site is still useable but the only way to close the sidenav is to pick a nav option. */
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 375px) {
   /* shrink the monkey logo in the nav bar...otherwise it throws off the text */
   .shrinkTheMonkey {
     height: 16px;
@@ -43,6 +47,7 @@ These do not effect the design layout, only used to demo media breaks on page. *
   /* change text size of brand logo text */
   #brand{
     font-size: 1.25rem;
+    padding-left: 0rem;
   }
 }
 @media screen and (min-width: 359px) {
@@ -50,15 +55,15 @@ These do not effect the design layout, only used to demo media breaks on page. *
     color: #ffffff;
     background-color: #673ab7;
   }
-  .shrinkTheMonkey {
-    height: 32px;
-    width: 32px;
-  }
 }
 @media screen and (min-width: 399px) {
   .mediaBreak399 {
     color: #ffffff;
     background-color: #673ab7;
+  }
+  .shrinkTheMonkey {
+    height: 32px;
+    width: 32px;
   }
 }
 @media screen and (min-width: 479px) {
