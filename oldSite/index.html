@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- links -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+  <!-- links -->
+
+  <title>Code Louisville FEWD</title>
+</head>
+<body>
+
+  <!-- count particles -->
+  <div class="count-particles">
+    <span class="js-count-particles">--</span> particles
+  </div>
+
+  <div id='particles-js'></div>
+
+  <!-- start header -->
+  <div class="header">
+    <nav>
+      <div class="nav-wrapper purple">
+        <a id="brand" href="#!" class="brand-logo">
+          <span>
+            <img src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px" alt="" class="shrinkTheMonkey">
+          </span>forge apes</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="./index.html"><i class="material-icons">home</i></a></li>
+          
+          <!-- Dropdown Trigger -->
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="./weather.html">Weather Underground</a></li>
+      <li><a href="./language.html">Language Localization</a></li>
+      <!-- <li><a href="#!">Project 3</a></li> -->
+      <!-- <li><a href="#!">Project 4</a></li> -->
+      <!-- <li><a href="#!">Project 5</a></li> -->
+    </ul>
+  
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img class="responsive-img" src="./assets/media/img/starrynightwallpaper3.jpg">
+          </div>
+          <a href="#user">
+            <img class="circle white" src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px">
+          </a>
+          <a href="#name">
+            <span class="white-text name">Daniel C. Landon Jr.</span>
+          </a>
+          <a href="#email">
+            <span class="white-text email">daniel.landonjr@gmail.com</span>
+          </a>
+        </div>
+      </li>
+      <li><a class="waves-effect" href="./index.html"><i class="material-icons">home</i></a></li>
+      <li><div class="divider"></div></li>
+          
+      <!-- Dropdown Trigger -->
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+      </li>
+    </ul>
+  </div>
+  <!-- end header -->
+
+  <!-- start main -->
+  <div class="main container">
+    <div class="row "></div> <!-- extra space at the top -->
+    <div class="row center">
+      <div class="col s2 z-depth-1 mediaBreak359">0359</div>
+      <div class="col s2 z-depth-1 mediaBreak399">0399</div>
+      <div class="col s2 z-depth-1 mediaBreak479">0479</div>
+      <div class="col s2 z-depth-1 mediaBreak599">0599</div>
+      <div class="col s2 z-depth-1 mediaBreak719">0719</div>
+      <div class="col s2 z-depth-1 mediaBreak839">0839</div>
+    </div>
+    <div class="row center">
+      <div class="col s2 z-depth-1 mediaBreak959">0959</div>
+      <div class="col s2 z-depth-1 mediaBreak1023">1023</div>
+      <div class="col s2 z-depth-1 mediaBreak1279">1279</div>
+      <div class="col s2 z-depth-1 mediaBreak1439">1439</div>
+      <div class="col s2 z-depth-1 mediaBreak1599">1599</div>
+      <div class="col s2 z-depth-1 mediaBreak1600Up">1600+</div>
+    </div>
+
+    <div id="contentGoesHere" class="row center white z-depth-1">
+      <h3>Code Louisville</h3>
+      <h5>Front End Web Development Final</h5>
+      <div class="row">
+        <!-- <div class="col s1"></div> -->
+        <div class="col s12 center">
+          <ul class="collapsible popout">
+            <li>
+              <div title="Click for more infomration about the home page." class="collapsible-header"><i class="material-icons">home</i>Home Page</div>
+              <div class="collapsible-body">
+                <ul class="collection">
+                  <li class="collection-item">The home page is designed so that it meets the basic requirements for the project.</li>
+                  <li class="collection-item">The project is stored on <a href="https://github.com/DanielLandonJr/CodeLouisvilleFEWD_FinalProject/tree/gh-pages">GitHub</a> and is hosted on <a href="https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/">GitHub Pages</a>.</li>
+                  <li class="collection-item">The bar across the top (with all the numbers) shows how big the screen is. If a box is purple then the screen is at least as large as the number displayed.</li>
+                  <li class="collection-item">In the lower left hand corner you will find an indicator that shows the current FPS as well as the number of particles generated.</li>
+                  <li class="collection-item">For the most part the page is responsive down to about 300 pixels (menus, formating etc). After that point everything starts to break down.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div title="Click for more infomration about the Weather Underground page." class="collapsible-header"><i class="material-icons">cloud</i>Weather Underground</div>
+              <div class="collapsible-body">
+                <ul class="collection">
+                  <li class="collection-item">This page demonstrates making a fetch() call and an API to get weather information.</li>
+                  <li class="collection-item">The original project is stored on <a href="https://github.com/DanielLandonJr/weatherUnderGroundApp">GitHub</a>. Minor changes were made to allow it to function on this site.</li>
+                  <li class="collection-item">An API key has been supplied for demonstration purposes. You can change this to a personal API  key by modifying the weather_api_KEY.js file.</li>
+                  <li class="collection-item">The location is stored in localstorage. If this is the first time running the application it will default to New Albany IN.</li>
+                  <li class="collection-item">Selecting the "Change Location" button will allow you to enter a new City/State for display.</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div title="Click for more infomration about the Language Localization page." class="collapsible-header"><i class="material-icons">record_voice_over</i>Language Localization</div>
+              <div class="collapsible-body">
+                <ul class="collection">
+                  <li class="collection-item">Demonstrates how to change the language of the application from a dropdown menu. This would be seen in a desktop application more than a website.</li>
+                  <li class="collection-item">The original project is stored on <a href="https://github.com/DanielLandonJr/applicationLocalization">GitHub</a>. Minor changes were made to allow it to function on this site.</li>
+                  <li class="collection-item">The various languages are stored in a JSON object and called as needed.</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="col s1"></div> -->
+      </div>
+    </div>
+  </div>
+  <!-- end main -->
+
+  <!-- start footer -->
+  <div class="footer">
+  <footer class="page-footer purple">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">
+              <span>
+                <img src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px">
+              </span>forge apes
+            </h5>
+            <p class="grey-text text-lighten-4">Code Louisville, Front End Web Development Final Project.</p>
+            <p>Class May 2018.</p>
+          </div>
+          <div class="col offset-l2">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
+          
+              <!-- Dropdown Trigger -->
+              <li>
+                <a class="dropdown-trigger grey-text text-lighten-3" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright deep-purple">
+        <div class="container">
+        © 2018 Copyright Daniel C. Landon Jr.
+        <a class="grey-text text-lighten-4 right" href="#">Back To Top</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- end footer -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script src='./assets/js/particles.js'></script>
+  <script src='./assets/js/stats.js'></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html> 

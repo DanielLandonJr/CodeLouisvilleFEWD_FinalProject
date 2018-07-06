@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- links -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/weather_app.css">
+  <!-- links -->
+
+  <title>Code Louisville FEWD</title>
+</head>
+<body>
+
+  <!-- count particles -->
+  <div class="count-particles">
+    <span class="js-count-particles">--</span> particles
+  </div>
+
+  <div id='particles-js'></div>
+
+  <!-- start header -->
+  <div class="header">
+    <nav>
+      <div class="nav-wrapper purple">
+        <a id="brand" href="#!" class="brand-logo">
+          <span>
+            <img src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px" alt="" class="shrinkTheMonkey">
+          </span>forge apes</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="./index.html"><i class="material-icons">home</i></a></li>
+          
+          <!-- Dropdown Trigger -->
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="./weather.html">Weather Underground</a></li>
+      <li><a href="./language.html">Language Localization</a></li>
+      <!-- <li><a href="#!">Project 3</a></li>
+      <li><a href="#!">Project 4</a></li>
+      <li><a href="#!">Project 5</a></li> -->
+    </ul>
+  
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img class="responsive-img" src="./assets/media/img/starrynightwallpaper3.jpg">
+          </div>
+          <a href="#user">
+            <img class="circle white" src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px">
+          </a>
+          <a href="#name">
+            <span class="white-text name">Daniel C. Landon Jr.</span>
+          </a>
+          <a href="#email">
+            <span class="white-text email">daniel.landonjr@gmail.com</span>
+          </a>
+        </div>
+      </li>
+      <li><a class="waves-effect" href="./index.html"><i class="material-icons">home</i></a></li>
+      <li><div class="divider"></div></li>
+          
+      <!-- Dropdown Trigger -->
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+      </li>
+    </ul>
+  </div>
+  <!-- end header -->
+
+  <!-- start main -->
+  <div class="main container">
+    <div class="row "></div> <!-- extra space at the top -->
+    <div class="row center">
+      <div class="col s2 z-depth-1 mediaBreak359">0359</div>
+      <div class="col s2 z-depth-1 mediaBreak399">0399</div>
+      <div class="col s2 z-depth-1 mediaBreak479">0479</div>
+      <div class="col s2 z-depth-1 mediaBreak599">0599</div>
+      <div class="col s2 z-depth-1 mediaBreak719">0719</div>
+      <div class="col s2 z-depth-1 mediaBreak839">0839</div>
+    </div>
+    <div class="row center">
+      <div class="col s2 z-depth-1 mediaBreak959">0959</div>
+      <div class="col s2 z-depth-1 mediaBreak1023">1023</div>
+      <div class="col s2 z-depth-1 mediaBreak1279">1279</div>
+      <div class="col s2 z-depth-1 mediaBreak1439">1439</div>
+      <div class="col s2 z-depth-1 mediaBreak1599">1599</div>
+      <div class="col s2 z-depth-1 mediaBreak1600Up">1600+</div>
+    </div>
+
+    <div id="contentGoesHere" class="center white z-depth-1">      
+      <!-- <div class="row"></div> -->
+      <div id='displayWeatherInformation' class="row center">
+        <!-- <div class="col s2"></div> -->
+        <div class="col s12 deep-purple z-depth-1 roundedCorners">
+          <div id="loadingDataBar" class="section">
+            <div><h3 id="loadingMessage">Loading ...</h3></div>
+            <div class="progress">
+              <div class="indeterminate"></div>
+            </div>
+          </div>
+          <div id="displayWeatherData" class='hide'>
+            <div class="section">
+              <h1 id="weather-location" class="white-text">location</h1>
+              <h3 id="weather-description">description</h3>
+              <h3 id="weather-string" class="white-text">string</h3>
+            </div>
+            <div class="section card purple roundedCorners">
+              <img class="z-depth-1 circle" src="" alt="" id='weather-icon'>
+              <h6 id="weather-time">time</h6>
+            </div>
+            <div class="section">
+              <ul id="weather-details" class="collection roundedCorners card">
+                <li id="weather-humidity" class="collection-item">humidity</li>
+                <li id="weather-dewPoint" class="collection-item">dew point</li>
+                <li id="weather-feelsLike" class="collection-item">feels like</li>
+                <li id="weather-wind" class="collection-item">wind</li>
+              </ul>
+            </div>
+            <hr class="z-depth-1">
+          </div>
+          <div id="changeLocation" class="section hide">
+            <button class="btn waves-effect waves-light modal-trigger purple" type="button" data-target='modal1'>Change Location</button>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+              © 2018 Copyright Daniel C. Landon Jr.
+            </div>
+            <div class="container">
+              <a href="https://www.wunderground.com/">WeatherUnderground</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col s2"></div> -->
+      </div>    
+      <!-- <div class="row"></div> -->
+  
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal roundedCorners">
+        <div class="modal-content deep-purple">
+          <h4>Choose Location</h4>
+          <div class="input-field col s6">
+            <input placeholder="City" id="city" type="text" class="validate">
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="State" id="state" type="text" class="validate">
+          </div>
+        </div>
+        <div class="modal-footer purple">
+          <button class="btn modal-close waves-effect waves-light deep-purple">Close</button>
+          <button id='setLocation' class="btn waves-effect waves-light deep-purple">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end main -->
+
+  <!-- start footer -->
+  <div class="footer">
+  <footer class="page-footer purple">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">
+              <span>
+                <img src="./assets/media/img/forgeApes_512_BASE.svg" height="32px" width="32px">
+              </span>forge apes
+            </h5>
+            <p class="grey-text text-lighten-4">Code Louisville, Front End Web Development Final Project.</p>
+            <p>Class May 2018.</p>
+          </div>
+          <div class="col offset-l2">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
+          
+              <!-- Dropdown Trigger -->
+              <li>
+                <a class="dropdown-trigger grey-text text-lighten-3" href="#!" data-target="dropdown1">Projects<i class="material-icons right">arrow_drop_down</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright deep-purple">
+        <div class="container">
+        © 2018 Copyright Daniel C. Landon Jr.
+        <a class="grey-text text-lighten-4 right" href="#">Back To Top</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- end footer -->
+  
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <script src='./assets/js/particles.js'></script>
+  <script src='./assets/js/stats.js'></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/weather_main.js" type="module"></script>
+</body>
+</html> 
