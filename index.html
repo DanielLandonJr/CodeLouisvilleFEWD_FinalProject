@@ -7,117 +7,134 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Parallax</title>
 
-  <link rel="stylesheet" href="./p_assets/css/p_main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
 
-  <nav class="nav-bar">
-    <span class="open-slide">
-      <a href="#" class="open-side-menu">
-        <svg width='30' height='30'>
-          <path d='M0,5 30,5' stroke='#fff' stroke-width='5'></path>
-          <path d='M0,14 30,14' stroke='#fff' stroke-width='5'></path>
-          <path d='M0,23 30,23' stroke='#fff' stroke-width='5'></path>
-        </svg>
-      </a>
+  <!-- side menu -->
+  <div id="menuButton">
+    <span>
+      <i class="fas fa-bars fa-5x"></i>
     </span>
-    <ul class="navbar-nav">
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
-  </nav>
+  </div>
 
-  <div id="side-menu-back"></div>
+  <div id="side-menu-back">
+    <div id='side-menu_close-arrow'>
+      <span>
+        <i class="fas fa-arrow-circle-left fa-5x"></i>
+        <span class="side-menu_close-message">close</span>
+      </span>
+    </div>
+    <div class="side-menu_message">
+      <p>Too many particles will slow down the browser.</p>
+      <p>Resize browser to clear particles.</p>
+    </div>
+    <div id='particles-js'></div>
+    <div class="count-particles">
+      <span class="js-count-particles">--</span> particles
+    </div>
+  </div>
 
   <div id="side-menu" class="side-menu">
-    <div id="links">
-      <a href="#" class="close-side-menu">&times;</a>
+    <section id='side-menu_close-button'>
+      <img src="./assets/img/forgeApes_512_BASE.svg" class="close-side-menu">
+    </section>
+    <section id='side-menu_links'>
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
-    </div>
-    <div id='particles-js'></div>
+    </section>
+    <section id='side-menu_winston'>
+      <span>"Winston’s duties consist of editing and rewriting history in the form of various media in order to conform and reinforce
+        the Party’s version of the past and present. The Party refers to this task as the "rectification" of records." ―
+        George Orwell, 1984</span>
+    </section>
   </div>
 
-  <div id="p_img1">
-    <div class="p_text">
-      <span class="p_border">
-        Image 1 Text
+  <div id="side-menu_scroll-down">
+    <div class="">
+      <span class="">
+        <i class="fas fa-arrow-circle-down fa-5x"></i>
+      </span>
+    </div>
+  </div>
+  <!-- end side menu -->
+
+  <!-- parallax section -->
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Professional
       </span>
     </div>
   </div>
 
-  <section class="p_section p_section-light">
+  <section class="section section-light">
     <h2>Section 1</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, earum? Natus modi facilis repudiandae. Esse cupiditate
-      porro culpa excepturi saepe.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur blanditiis deleniti voluptatem mollitia repellat!
+      Ipsum ipsam commodi non tenetur cupiditate?</p>
   </section>
 
-  <div id="p_img2">
-    <div class="p_text">
-      <span class="p_border">
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border trans">
         Image 2 Text
       </span>
     </div>
   </div>
 
-  <section class="p_section p_section-dark">
+  <section class="section section-dark">
     <h2>Section 2</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, earum? Natus modi facilis repudiandae. Esse cupiditate
-      porro culpa excepturi saepe.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, autem ipsam? Quo nostrum temporibus aliquam omnis hic
+      nisi dolor. Incidunt.</p>
   </section>
 
-  <div id="p_img3">
-    <div class="p_text">
-      <span class="p_border">
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border trans">
         Image 3 Text
       </span>
     </div>
   </div>
 
-  <section class="p_section p_section-dark">
+  <section class="section section-dark">
     <h2>Section 3</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, earum? Natus modi facilis repudiandae. Esse cupiditate
-      porro culpa excepturi saepe.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum beatae est aperiam cumque reiciendis iusto voluptas
+      esse nemo saepe.</p>
   </section>
 
-  <div id="p_img4">
-    <div class="p_text">
-      <span class="p_border">
-        Image 4 Text
+  <!-- WIP parallax image -->
+  <!-- <div class="pimg4">
+    <img class="img1" src="./assets/img/1.png">
+    <img class="img2" src="./assets/img/2.png">
+    <img class="img3" src="./assets/img/3.png">
+    <img class="img4" src="./assets/img/4.png">
+  </div> -->
+
+  <div class="pimg4">
+    <div class="ptext">
+      <span class="border trans">
+        forge apes
       </span>
     </div>
   </div>
 
-  <section id='footer' class="p_section p_section-dark">
+  <section class="footer section section-dark">
     <h2>Footer</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, earum? Natus modi facilis repudiandae. Esse cupiditate
-      porro culpa excepturi saepe.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum beatae est aperiam cumque reiciendis iusto voluptas
+      esse nemo saepe.</p>
   </section>
+  <!-- end parallax -->
 
-  <div id='particles-js'></div>
-
-  <!-- count particles -->
-  <div class="count-particles">
-    <span class="js-count-particles">--</span> particles
-  </div>
-
-
-  <script src='./p_assets/js/particles.js'></script>
-  <script src='./p_assets/js/stats.js'></script>
-  <script src="./p_assets/js/p_main.js"></script>
+  <script src="./assets/js/particles.js"></script>
+  <script src="./assets/js/stats.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
