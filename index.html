@@ -16,125 +16,413 @@
 
 <body>
 
-  <!-- side menu -->
-  <div id="menuButton">
-    <span>
-      <i class="fas fa-bars fa-5x"></i>
-    </span>
-  </div>
+  <div id="container">
 
-  <div id="side-menu-back">
-    <div id='side-menu_close-arrow'>
+    <!-- message card -->
+    <div class="card u_hide">
+      <i class="fas fa-info-circle fa-5x"></i>
+      <h1 id='card_title'>Card Title</h1>
+      <hr>
+      <p id='card_message-primary'>Card Message Primary</p>
+      <p id="card_message-secondary">Card Message Secondary</p>
+      <p id='card_close'>Click Card to Close</p>
+    </div>
+
+    <!-- side menu -->
+    <div id="menuButton">
       <span>
-        <i class="fas fa-arrow-circle-left fa-5x"></i>
-        <span class="side-menu_close-message">close</span>
+        <i class="fas fa-bars fa-5x" title="Side Menu"></i>
       </span>
     </div>
-    <div class="side-menu_message">
-      <p>Too many particles will slow down the browser.</p>
-      <p>Resize browser to clear particles.</p>
-    </div>
-    <div id='particles-js'></div>
-    <div class="count-particles">
-      <span class="js-count-particles">--</span> particles
-    </div>
-  </div>
 
-  <div id="side-menu" class="side-menu">
-    <section id='side-menu_close-button'>
-      <img src="./assets/img/forgeApes_512_BASE.svg" class="close-side-menu">
+    <div id="side-menu-back">
+      <div id='side-menu_close-arrow'>
+        <span>
+          <i class="fas fa-arrow-circle-left fa-5x"></i>
+          <span class="side-menu_close-message">close</span>
+        </span>
+      </div>
+      <div class="side-menu_message">
+        <p>Too many particles will slow down the browser.</p>
+        <p>Resize browser to clear particles.</p>
+      </div>
+      <div id='particles-js'></div>
+      <div class="count-particles">
+        <span class="js-count-particles">--</span> particles
+      </div>
+    </div>
+
+    <div id="side-menu" class="side-menu">
+      <section id='side-menu_close-button'>
+        <img src="./assets/img/forgeApes_512_BASE.svg" class="close-side-menu" title="Close Menu">
+      </section>
+      <section id='side-menu_links'>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </section>
+      <section id='side-menu_winston'>
+        <span>"Winston’s duties consist of editing and rewriting history in the form of various media in order to conform and reinforce
+          the Party’s version of the past and present. The Party refers to this task as the "rectification" of records."
+          ― George Orwell, 1984</span>
+      </section>
+    </div>
+
+    <div id="side-menu_scroll-down">
+      <div>
+        <span>
+          <i class="fas fa-arrow-circle-down fa-5x"></i>
+        </span>
+      </div>
+    </div>
+    <!-- end side menu -->
+
+    <!-- parallax section -->
+    <div class="pimg1">
+      <div class="ptext">
+        <span class="border">
+          Professional
+        </span>
+      </div>
+    </div>
+
+    <section id='polarClock' class="section section-light">
+      <div id="clock">
+        <canvas title="" id="myCanvas" style="border:1px solid#000"></canvas>
+      </div>
+      <div>
+        <h2>What's going on here?</h2>
+        <p>This site is over-designed and
+          <strong>"busy"</strong>.</p>
+        <p>There are a lot of things in the site that just don't make any sense.</p>
+        <span>
+          <i class="fas fa-asterisk"></i> The Side Menu.</span>
+        <br>
+        <span>
+          <i class="fas fa-asterisk"></i> The FPS & Particle Counters on the Side Menu.</span>
+        <br>
+        <span>
+          <i class="fas fa-asterisk"></i> The Particle Effects on the side menu.</span>
+        <br>
+        <span>
+          <i class="fas fa-asterisk"></i> The Amount of animation.</span>
+        <br>
+        <span>
+          <i class="fas fa-asterisk"></i> Also the colors may seem a bit weird ... but they work on a color wheel so we will "roll" with it.</span>
+        <br>
+        <span>
+          <i class="fas fa-asterisk"></i> A Polar Clock???</span>
+        <br>
+        <p>
+          <strong>
+            <em>That's the point!</em>
+          </strong> This is a site to demonstrate various skills.
+        </p>
+        <p>Keep Scrolling To See Some Apps</p>
+      </div>
     </section>
-    <section id='side-menu_links'>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
+
+    <div class="pimg2">
+      <div class="ptext">
+        <span class="border trans">
+          Creative
+        </span>
+      </div>
+    </div>
+
+    <section id='app1' class="section section-dark">
+      <div id='app-1_container' class="u_hide">
+        <div id="content">
+          <section id="loadData">
+            <h1>Loading</h1>
+            <span class="loadSpinner"></span>
+          </section>
+
+          <section id="chooseLanguage" class="u_hide">
+            <label for="selectLanguage">Translation by Google</label>
+            <select id="selectLanguage">
+              <option value="" selected disabled>Choose Language</option>
+              <option value="English">English</option>
+              <option value="Chinese">Chinese (Simplified)</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Latin">Latin</option>
+              <option value="Russian">Russian</option>
+              <option value="Gaelic">Scots Gaelic</option>
+            </select>
+            <br>
+            <span>Click Button Below To Close</span>
+          </section>
+
+
+          <section id="languages" class="u_hide">
+            <section id="default" class="u_hide">
+              <h3>"
+                <span class="title">title</span>"</h3>
+              <p>by
+                <span class="author">author</span> in
+                <span class="language">default</span>
+              </p>
+              <p class="firstLetter">
+                <span class='local1 firstLetter'>default 1</span>
+                <br>
+                <span class='local2'>default 2</span>
+                <br>
+                <span class='local3'>default 3</span>
+                <br>
+                <span class='local4'>default 4</span>
+              </p>
+              <p class="firstLetter">
+                <span class='local5'>default 5</span>
+                <br>
+                <span class='local6'>default 6</span>
+                <br>
+                <span class='local7'>default 7</span>
+                <br>
+                <span class='local8'>default 8</span>
+                <br>
+                <span class='local9'>default 9</span>
+              </p>
+              <p class="firstLetter">
+                <span class='local10'>default 10</span>
+                <br>
+                <span class='local11'>default 11</span>
+                <br>
+                <span class='local12'>default 12</span>
+                <br>
+                <span class='local13'>default 13</span>
+                <br>
+                <span class='local14'>default 14</span>
+                <br>
+                <span class='local15'>default 15</span>
+                <br>
+                <span class='local16'>default 16</span>
+                <br>
+                <span class='local17'>default 17</span>
+                <br>
+                <span class='local18'>default 18</span>
+              </p>
+            </section>
+
+            <section id="translations" class="u_hide">
+              <h3>"
+                <span class="title">title</span>"</h3>
+              <p>by
+                <span class="author">author</span> in
+                <span class="language">default</span>
+              </p>
+              <p class="firstLetter">
+                <span class='local1'>translation 1</span>
+                <br>
+                <span class='local2'>translation 2</span>
+                <br>
+                <span class='local3'>translation 3</span>
+                <br>
+                <span class='local4'>translation 4</span>
+              </p>
+              <p class="firstLetter">
+                <span class='local5'>translation 5</span>
+                <br>
+                <span class='local6'>translation 6</span>
+                <br>
+                <span class='local7'>translation 7</span>
+                <br>
+                <span class='local8'>translation 8</span>
+                <br>
+                <span class='local9'>translation 9</span>
+              </p>
+              <p class="firstLetter">
+                <span class='local10'>translation 10</span>
+                <br>
+                <span class='local11'>translation 11</span>
+                <br>
+                <span class='local12'>translation 12</span>
+                <br>
+                <span class='local13'>translation 13</span>
+                <br>
+                <span class='local14'>translation 14</span>
+                <br>
+                <span class='local15'>translation 15</span>
+                <br>
+                <span class='local16'>translation 16</span>
+                <br>
+                <span class='local17'>translation 17</span>
+                <br>
+                <span class='local18'>translation 18</span>
+              </p>
+            </section>
+
+            <section id="characters" class="u_hide">
+              <h3>"
+                <span class="title">title</span>"</h3>
+              <p>by
+                <span class="author">author</span> in
+                <span class="language">default</span>
+              </p>
+              <p>
+                <span class='local1'>characters 1</span>
+                <br>
+                <span class='local2'>characters 2</span>
+                <br>
+                <span class='local3'>characters 3</span>
+                <br>
+                <span class='local4'>characters 4</span>
+              </p>
+              <p>
+                <span class='local5'>characters 5</span>
+                <br>
+                <span class='local6'>characters 6</span>
+                <br>
+                <span class='local7'>characters 7</span>
+                <br>
+                <span class='local8'>characters 8</span>
+                <br>
+                <span class='local9'>characters 9</span>
+              </p>
+              <p>
+                <span class='local10'>characters 10</span>
+                <br>
+                <span class='local11'>characters 11</span>
+                <br>
+                <span class='local12'>characters 12</span>
+                <br>
+                <span class='local13'>characters 13</span>
+                <br>
+                <span class='local14'>characters 14</span>
+                <br>
+                <span class='local15'>characters 15</span>
+                <br>
+                <span class='local16'>characters 16</span>
+                <br>
+                <span class='local17'>characters 17</span>
+                <br>
+                <span class='local18'>characters 18</span>
+              </p>
+            </section>
+          </section>
+        </div>
+      </div>
+      <div id="app-1_text">
+        <a href="#!" id='app-1_button' class="myButton">Show Language Localization</a>
+        <p>This application demonstrates how to change the language in a application. Granted a browser will do the translation
+          for you...but on a desktop application you have to select the language that you want to use. </p>
+        <p>The languages and their translations are coming from a FireBase database.</p>
+      </div>
     </section>
-    <section id='side-menu_winston'>
-      <span>"Winston’s duties consist of editing and rewriting history in the form of various media in order to conform and reinforce
-        the Party’s version of the past and present. The Party refers to this task as the "rectification" of records." ―
-        George Orwell, 1984</span>
+
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border trans">
+          Inspiration
+        </span>
+      </div>
+    </div>
+
+    <section id='app2' class="section section-dark">
+      <div id='app-2_container' class="u_hide">
+        <div id="mainContent">
+          <div id='displayWeatherInformation'>
+            <div></div>
+            <div class="roundedCorners">
+              <div id="loadingDataBar">
+                <div>
+                  <h3 id="loadingMessage">Loading ...</h3>
+                </div>
+                <div class="progress">
+                  <div class="indeterminate"></div>
+                </div>
+              </div>
+              <div id="displayWeatherData" class='u_hide'>
+                <div class="">
+                  <h1 id="weather-location">location</h1>
+                  <h3 id="weather-description">description</h3>
+                  <h3 id="weather-string">string</h3>
+                </div>
+                <div class="roundedCorners">
+                  <img id='weather-icon'>
+                  <h6 id="weather-time">time</h6>
+                </div>
+                <div>
+                  <ul id="weather-details" class="roundedCorners">
+                    <li id="weather-humidity">humidity</li>
+                    <li id="weather-dewPoint">dew point</li>
+                    <li id="weather-feelsLike">feels like</li>
+                    <li id="weather-wind">wind</li>
+                  </ul>
+                </div>
+                <hr>
+              </div>
+              <div id="changeLocation" class="u_hide">
+                <button type="button">Change Location</button>
+              </div>
+              <div>
+                <div>
+                  © 2018 Copyright Daniel C. Landon Jr.
+                </div>
+                <div>
+                  <a href="https://www.wunderground.com/">WeatherUnderground</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Structure -->
+          <div id="modal1" class="roundedCorners">
+            <div class="modal-content">
+              <h4>Choose Location</h4>
+              <div>
+                <input placeholder="City" id="city" type="text">
+              </div>
+              <div>
+                <input placeholder="State" id="state" type="text">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button>Close</button>
+              <button id='setLocation'>Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="app-2_text">
+        <a href="#!" id='app-2_button' class="myButton">Show Weather UnderGround</a>
+        <p>This application demonstrates how to make an API call.</p>
+        <p>Using an API from WeatherUnderground we get the weather information for a specific city and display it for the user.
+          The user is able to change the location and that location will be saved to localStorage. Next time the user starts
+          the app the location that was saved is loaded up and displayed.</p>
+      </div>
     </section>
-  </div>
 
-  <div id="side-menu_scroll-down">
-    <div class="">
-      <span class="">
-        <i class="fas fa-arrow-circle-down fa-5x"></i>
-      </span>
+    <!-- WIP parallax image -->
+    <!-- <div class="pimg4">
+        <img class="img1" src="./assets/img/1.png">
+        <img class="img2" src="./assets/img/2.png">
+        <img class="img3" src="./assets/img/3.png">
+        <img class="img4" src="./assets/img/4.png">
+      </div> -->
+
+    <div class="pimg4">
+      <div class="ptext">
+        <span class="border trans">
+          forge apes
+        </span>
+      </div>
     </div>
-  </div>
-  <!-- end side menu -->
 
-  <!-- parallax section -->
-  <div class="pimg1">
-    <div class="ptext">
-      <span class="border">
-        Professional
-      </span>
-    </div>
-  </div>
+    <section class="footer section section-dark">
+      <h2>Footer</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum beatae est aperiam cumque reiciendis iusto voluptas
+        esse nemo saepe.</p>
+    </section>
+    <!-- end parallax -->
 
-  <section class="section section-light">
-    <h2>Section 1</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur blanditiis deleniti voluptatem mollitia repellat!
-      Ipsum ipsam commodi non tenetur cupiditate?</p>
-  </section>
-
-  <div class="pimg2">
-    <div class="ptext">
-      <span class="border trans">
-        Image 2 Text
-      </span>
-    </div>
+    <!-- end container -->
   </div>
 
-  <section class="section section-dark">
-    <h2>Section 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, autem ipsam? Quo nostrum temporibus aliquam omnis hic
-      nisi dolor. Incidunt.</p>
-  </section>
-
-  <div class="pimg3">
-    <div class="ptext">
-      <span class="border trans">
-        Image 3 Text
-      </span>
-    </div>
-  </div>
-
-  <section class="section section-dark">
-    <h2>Section 3</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum beatae est aperiam cumque reiciendis iusto voluptas
-      esse nemo saepe.</p>
-  </section>
-
-  <!-- WIP parallax image -->
-  <!-- <div class="pimg4">
-    <img class="img1" src="./assets/img/1.png">
-    <img class="img2" src="./assets/img/2.png">
-    <img class="img3" src="./assets/img/3.png">
-    <img class="img4" src="./assets/img/4.png">
-  </div> -->
-
-  <div class="pimg4">
-    <div class="ptext">
-      <span class="border trans">
-        forge apes
-      </span>
-    </div>
-  </div>
-
-  <section class="footer section section-dark">
-    <h2>Footer</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum beatae est aperiam cumque reiciendis iusto voluptas
-      esse nemo saepe.</p>
-  </section>
-  <!-- end parallax -->
-
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
   <script src="./assets/js/particles.js"></script>
   <script src="./assets/js/stats.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main.js" type="module"></script>
 </body>
 
 </html>
