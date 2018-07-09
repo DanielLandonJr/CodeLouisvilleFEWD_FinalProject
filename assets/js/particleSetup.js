@@ -19,7 +19,7 @@ export const ParticleSetup = (() => {
     stats = new Stats;
     stats.setMode(0);
     stats.domElement.style.position = 'absolute';
-    stats.domElement.style.right = '5px';
+    stats.domElement.style.right = '25px';
     stats.domElement.style.top = '5px';
     // must add fps to tag that will contain it
     document.querySelector('#side-menu-back').appendChild(stats.domElement);

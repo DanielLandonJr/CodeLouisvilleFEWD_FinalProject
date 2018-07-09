@@ -57,15 +57,21 @@
         <img src="./assets/img/forgeApes_512_BASE.svg" class="close-side-menu" title="Close Menu">
       </section>
       <section id='side-menu_links'>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#">
+          <i class="fas fa-home"></i> Home</a>
+        <a href="#">
+          <i class="fas fa-atlas"></i> About</a>
+        <a href="#">
+          <i class="fas fa-screwdriver"></i> Services</a>
+        <a href="#">
+          <i class="fas fa-envelope"></i> Contact</a>
+        <a href="./oldSite/index.html" target="_blank">
+          <i class="fab fa-chrome"></i> Old FEWD Site</a>
       </section>
       <section id='side-menu_winston'>
-        <span>"Winston’s duties consist of editing and rewriting history in the form of various media in order to conform and reinforce
-          the Party’s version of the past and present. The Party refers to this task as the "rectification" of records."
-          ― George Orwell, 1984</span>
+        <span>"The Grid. A digital frontier. I tried to picture clusters of information as they moved through the computer. What
+          did they look like? Ships? motorcycles? Were the circuits like freeways? I kept dreaming of a world I thought I'd
+          never see. And then, one day...I got in." ― Kevin Flynn, TRON: Legacy 2010</span>
       </section>
     </div>
 
@@ -82,7 +88,7 @@
     <div class="pimg1">
       <div class="ptext">
         <span class="border">
-          Professional
+          Profession
         </span>
       </div>
     </div>
@@ -97,22 +103,25 @@
           <strong>"busy"</strong>.</p>
         <p>There are a lot of things in the site that just don't make any sense.</p>
         <span>
-          <i class="fas fa-asterisk"></i> The Side Menu.</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Side Menu.</span>
         <br>
         <span>
-          <i class="fas fa-asterisk"></i> The FPS & Particle Counters on the Side Menu.</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The FPS & Particle Counters on the Side Menu.</span>
         <br>
         <span>
-          <i class="fas fa-asterisk"></i> The Particle Effects on the side menu.</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Particle Effects on the side menu.</span>
         <br>
         <span>
-          <i class="fas fa-asterisk"></i> The Amount of animation.</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Amount of animation.</span>
         <br>
         <span>
-          <i class="fas fa-asterisk"></i> Also the colors may seem a bit weird ... but they work on a color wheel so we will "roll" with it.</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;Also the colors may seem a bit weird ... but they work on a color wheel so we will "roll" with it.</span>
         <br>
         <span>
-          <i class="fas fa-asterisk"></i> A Polar Clock???</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;A Polar Clock???</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;You should see the code!</span>
         <br>
         <p>
           <strong>
@@ -126,7 +135,7 @@
     <div class="pimg2">
       <div class="ptext">
         <span class="border trans">
-          Creative
+          Create
         </span>
       </div>
     </div>
@@ -313,76 +322,67 @@
     <div class="pimg3">
       <div class="ptext">
         <span class="border trans">
-          Inspiration
+          Inspire
         </span>
       </div>
     </div>
 
     <section id='app2' class="section section-dark">
       <div id='app-2_container' class="u_hide">
-        <div id="mainContent">
-          <div id='displayWeatherInformation'>
-            <div></div>
-            <div class="roundedCorners">
-              <div id="loadingDataBar">
-                <div>
-                  <h3 id="loadingMessage">Loading ...</h3>
-                </div>
-                <div class="progress">
-                  <div class="indeterminate"></div>
-                </div>
-              </div>
-              <div id="displayWeatherData" class='u_hide'>
-                <div class="">
-                  <h1 id="weather-location">location</h1>
-                  <h3 id="weather-description">description</h3>
-                  <h3 id="weather-string">string</h3>
-                </div>
-                <div class="roundedCorners">
-                  <img id='weather-icon'>
-                  <h6 id="weather-time">time</h6>
-                </div>
-                <div>
-                  <ul id="weather-details" class="roundedCorners">
-                    <li id="weather-humidity">humidity</li>
-                    <li id="weather-dewPoint">dew point</li>
-                    <li id="weather-feelsLike">feels like</li>
-                    <li id="weather-wind">wind</li>
-                  </ul>
-                </div>
-                <hr>
-              </div>
-              <div id="changeLocation" class="u_hide">
-                <button type="button">Change Location</button>
-              </div>
-              <div>
-                <div>
-                  © 2018 Copyright Daniel C. Landon Jr.
-                </div>
-                <div>
-                  <a href="https://www.wunderground.com/">WeatherUnderground</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id='weather_information'>
 
-          <!-- Modal Structure -->
-          <div id="modal1" class="roundedCorners">
-            <div class="modal-content">
-              <h4>Choose Location</h4>
-              <div>
-                <input placeholder="City" id="city" type="text">
-              </div>
-              <div>
-                <input placeholder="State" id="state" type="text">
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button>Close</button>
-              <button id='setLocation'>Save Changes</button>
-            </div>
-          </div>
+          <section id='weather_change-location'>
+            <section id="weather_location-information">
+              <section id='weather_location-city'>
+                <input placeholder="City" id="weather_city" type="text">
+              </section>
+              <i class="fas fa-cogs"></i>
+              <section id="weather_location-state">
+                <input placeholder="State" id="weather_state" type="text">
+              </section>
+            </section>
+            <section id="weather_location-buttons">
+              <button id='weather_close-location' class="myButton">Close</button>
+              <i class="fas fa-cogs"></i>
+              <button id='weather_set-location' class="myButton">Save Changes</button>
+            </section>
+          </section>
+
+          <section id='weather_message' class="u_hide">
+            <p id="weather_message-text">message</p>
+          </section>
+
+          <section id="weather_display-data">
+            <section>
+              <h6 id="weather_data-time">time</h6>
+            </section>
+            <section>
+              <button id="weather_data-location" class="myButton" title='Change Location'>location</button>
+            </section>
+            <section>
+              <h3 id="weather_data-description">description</h3>
+            </section>
+            <section>
+              <h3 id="weather_data-string">string</h3>
+            </section>
+            <section>
+              <img src="" alt="" id='weather_data-icon'>
+            </section>
+            <section>
+              <ul id="weather_details">
+                <li id="weather_data-humidity">humidity</li>
+                <li id="weather_data-dewPoint">dew point</li>
+                <li id="weather_data-feelsLike">feels like</li>
+                <li id="weather_data-wind">wind</li>
+              </ul>
+            </section>
+          </section>
+
+          <section id="weather_footer">
+            <a href="https://www.wunderground.com/" target="_blank">WeatherUnderground</a>
+          </section>
         </div>
+        <hr>
       </div>
       <div id="app-2_text">
         <a href="#!" id='app-2_button' class="myButton">Show Weather UnderGround</a>
@@ -409,10 +409,30 @@
       </div>
     </div>
 
-    <section class="footer section section-dark">
-      <h2>Footer</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dolorum beatae est aperiam cumque reiciendis iusto voluptas
-        esse nemo saepe.</p>
+    <section id="mainFooter" class="section section-dark">
+      <section id="main-footer_social">
+        <a href="https://github.com/DanielLandonJr" target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-c-landon-jr/" target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/daniel.landonjr" target="_blank">
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/MujunKross" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.twitch.tv/maodunkross" target="_blank">
+          <i class="fab fa-twitch fa-2x"></i>
+        </a>
+        <a href="mailto:daniel.landonjr@gmail.com" target="_blank">
+          <i class="fas fa-at fa-2x"></i>
+        </a>
+      </section>
+      <section id="main-footer_copyright">
+        <span>&copy 2018, Daniel C. Landon Jr.</span>
+      </section>
     </section>
     <!-- end parallax -->
 

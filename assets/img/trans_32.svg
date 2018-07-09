@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="32"
+   width="32"
+   id="svg3753"
+   viewBox="-500 -500 32 32"
+   version="1.1">
+  <metadata
+     id="metadata3757">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3745">
+    <pattern
+       viewBox="0 0 30 30"
+       height="30"
+       width="30"
+       y="0"
+       x="0"
+       patternUnits="userSpaceOnUse"
+       id="CheckerPattern">
+      <rect
+         id="rect3736"
+         width="15"
+         height="15"
+         y="0"
+         x="0"
+         stroke="none"
+         fill="#FFF" />
+      <rect
+         id="rect3738"
+         width="15"
+         height="15"
+         y="15"
+         x="15"
+         stroke="none"
+         fill="#FFF" />
+      <rect
+         id="rect3740"
+         width="15"
+         height="15"
+         y="0"
+         x="15"
+         stroke="none"
+         fill="#E5E5E5" />
+      <rect
+         id="rect3742"
+         width="15"
+         height="15"
+         y="15"
+         x="0"
+         stroke="none"
+         fill="#E5E5E5" />
+    </pattern>
+  </defs>
+  <g
+     transform="matrix(0.032,0,0,0.032,-484,-484)"
+     id="g3751">
+    <title
+       id="title3747">“Transparent” Background Pattern, by Adam Stanislav</title>
+    <rect
+       style="fill:url(#CheckerPattern);stroke:none"
+       id="rect3749"
+       height="1000"
+       width="1000"
+       y="-500"
+       x="-500" />
+  </g>
+</svg>

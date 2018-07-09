@@ -8,25 +8,28 @@ export const SideMenu = (() => {
   };
 
   const menuSelection = (event) => {
-    document.querySelector('#card_title').innerHTML = '';
-    document.querySelector('#card_message-primary').innerHTML = '';
-    document.querySelector('#card_message-secondary').innerHTML = '';
+    let xText = String(event.target.innerHTML).toLowerCase();
 
-    let xStr = `you clicked: ${String(event.target.innerHTML).toUpperCase()}`;
+    // if xText does not have old fewd site then display CanvasRenderingContext2D...otherwise load old site
+    if (!xText.includes('old fewd site')) {
+      document.querySelector('#card_title').innerHTML = '';
+      document.querySelector('#card_message-primary').innerHTML = '';
+      document.querySelector('#card_message-secondary').innerHTML = '';
 
-    document.querySelector('#card_title').innerHTML = xStr;
+      let xStr = `you clicked: ${String(event.target.innerHTML).toUpperCase()}`;
 
-    xStr = 'In the original Star Trek series you would see pipes sticking out of the walls in the hallways. Those pipies were labeled "GNDN" for "Goes Nowhere Does Nothing".';
+      document.querySelector('#card_title').innerHTML = xStr;
 
-    document.querySelector('#card_message-primary').innerHTML = xStr;
+      xStr = 'In the original Star Trek series you would see pipes sticking out of the walls in the hallways. Those pipies were labeled "GNDN" for "Goes Nowhere Does Nothing".';
 
-    xStr = 'Like this link!';
+      document.querySelector('#card_message-primary').innerHTML = xStr;
 
-    document.querySelector('#card_message-secondary').innerHTML = xStr;
+      xStr = 'Like this link!';
 
-    document.querySelector('.card').classList.remove('u_hide');
+      document.querySelector('#card_message-secondary').innerHTML = xStr;
 
-    // alert(xStr);
+      document.querySelector('.card').classList.remove('u_hide');
+    };
   };
 
   const toggleSideMenu = () => {
@@ -34,12 +37,14 @@ export const SideMenu = (() => {
       // overlay is hidden so show it and the menu
       document.querySelector('#side-menu').style.width = '250px';
       document.querySelector('#side-menu-back').style.height = '100vh';
+      document.querySelector('#side-menu-back').style.width = '100vw';
 
       document.querySelector('#side-menu_close-arrow').style.left = '265px';
     } else {
       // hide overlay and menu
       document.querySelector('#side-menu').style.width = '0';
       document.querySelector('#side-menu-back').style.height = '0vh';
+      document.querySelector('#side-menu-back').style.width = '0vw';
       document.querySelector('#side-menu_close-arrow').style.left = '0px';
     }
   };

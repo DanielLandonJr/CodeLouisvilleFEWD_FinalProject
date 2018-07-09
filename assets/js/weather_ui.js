@@ -4,39 +4,54 @@ export const UI = (() => {
     paint: (weather) => {
       let wind_string = `Wind: From the ${weather.wind_dir} @ ${weather.wind_mph} MPH, Gusting to ${weather.wind_gust_mph} MPH`;
 
-      document.querySelector('#weather-location').textContent = weather.display_location.full;
-      document.querySelector('#weather-description').textContent = weather.weather;
-      document.querySelector('#weather-string').textContent = weather.temperature_string;
-      document.querySelector('#weather-icon').setAttribute('src', weather.icon_url);
-      document.querySelector('#weather-time').textContent = new Date();
-      document.querySelector('#weather-humidity').textContent = `Relative Humidity: ${weather.relative_humidity}`;
-      document.querySelector('#weather-dewPoint').textContent = `Dew Point: ${weather.dewpoint_string}`;
-      document.querySelector('#weather-feelsLike').textContent = `Feels Like: ${weather.feelslike_string}`;
-      document.querySelector('#weather-wind').textContent = wind_string;
+      document.querySelector('#weather_data-location').textContent = weather.display_location.full;
+      document.querySelector('#weather_data-description').textContent = weather.weather;
+      document.querySelector('#weather_data-string').textContent = weather.temperature_string;
+      document.querySelector('#weather_data-icon').setAttribute('src', weather.icon_url);
+      document.querySelector('#weather_data-time').textContent = new Date();
+      document.querySelector('#weather_data-humidity').textContent = `Relative Humidity: ${weather.relative_humidity}`;
+      document.querySelector('#weather_data-dewPoint').textContent = `Dew Point: ${weather.dewpoint_string}`;
+      document.querySelector('#weather_data-feelsLike').textContent = `Feels Like: ${weather.feelslike_string}`;
+      document.querySelector('#weather_data-wind').textContent = wind_string;
     },
     clearLocationFields: () => {
-      document.querySelector('#city').value = "";
-      document.querySelector('#state').value = '';
+      document.querySelector('#weather_city').value = "";
+      document.querySelector('#weather_state').value = '';
     },
-    validDataReturn: () => {
-      // change loading message
-      document.querySelector('#loadingMessage').innerText = 'Loading ...';
-      // hide load progress bar
-      document.querySelector('#loadingDataBar').classList.add('u_hide');
-      // show weather data
-      document.querySelector('#displayWeatherData').classList.remove('u_hide');
-      // show change location button
-      document.querySelector('#changeLocation').classList.remove('u_hide');
+    clearMessage: () => {
+      document.querySelector('#weather_message-text').value = '';
+      document.querySelector('#weather_message').style.display = 'none';
     },
-    invalidDataReturn: () => {
-      // show loading bar
-      document.querySelector('#loadingDataBar').classList.remove('u_hide');
-      // hide weather data
-      document.querySelector('#displayWeatherData').classList.add('u_hide');
-      // show change location button
-      document.querySelector('#changeLocation').classList.remove('u_hide');
-      // change loading message
-      document.querySelector('#loadingMessage').innerText = 'Invalid Data, please change location.';
+    showMessage: (message) => {
+      document.querySelector('#weather_message-text').innerHTML = message;
+      document.querySelector('#weather_message').style.display = 'grid';
+    },
+    toggleDataDisplay: () => {
+      let xTag = document.querySelector('#weather_display-data');
+
+      if (xTag.style.display === 'none') {
+        // show it
+        xTag.style.display = 'grid';
+      } else {
+        // hide it
+        xTag.style.display = 'none';
+      }
+    },
+    toggleChangeLocation: () => {
+      let xTag = document.querySelector('#weather_change-location');
+
+      if (xTag.style.display === 'none') {
+        // show it
+        xTag.style.display = 'grid';
+      } else {
+        // hide it
+        xTag.style.display = 'none';
+      }
+    },
+    hideEveryThing: () => {
+      document.querySelector('#weather_change-location').style.display = 'none';
+      document.querySelector('#weather_message').style.display = 'none';
+      document.querySelector('#weather_display-data').style.display = 'none';
     }
   }
 })();
