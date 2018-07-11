@@ -224,6 +224,3 @@ export const PolarClock = (() => {
     }
   }
 })();
-
-//  set initial size of canvas
-//  PolarClock.init(600);

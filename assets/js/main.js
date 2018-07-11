@@ -1,12 +1,11 @@
-// import * as sm from '../../assets/js/sideMenu.js';
-
-import * as pc from './polarClock.js';
-import * as particles from './particleSetup.js';
-import * as sm from './sideMenu.js';
-import * as lang from './language_main.js';
-import * as weather from './weather_main.js';
+import * as pc from './polarClock.js?version=1.0.0';
+import * as particles from './particleSetup.js?version=1.0.1';
+import * as sm from './sideMenu.js?version=1.0.1';
+import * as lang from './language_main.js?version=1.0.1';
+import * as weather from './weather_main.js?version=1.0.1';
 
 const ParallaxDesign = (() => {
+
   document.addEventListener('DOMContentLoaded', () => {
     console.log('loaded');
   });
