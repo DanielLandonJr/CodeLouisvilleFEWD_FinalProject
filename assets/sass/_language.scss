@@ -1,0 +1,66 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ language start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+/* loading spinner */
+.loadSpinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+  border-top: 2px solid $color_primary;
+  border-right: 2px solid transparent;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* end spinner */
+
+#content {
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+#languages {
+  text-align: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#default,
+#translations,
+#characters {
+  border-bottom: 2px solid $color_primary-light;
+  border-top: 2px solid $color_primary-light;
+  padding-top: 20px;
+}
+
+#selectLanguage {
+  margin: 8px;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ language end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 

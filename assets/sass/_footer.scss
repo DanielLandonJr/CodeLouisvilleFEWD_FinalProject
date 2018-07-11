@@ -1,0 +1,34 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ footer start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+#mainFooter {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(2, auto-fit);
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#main-footer_social,
+#main-footer_copyright {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#main-footer_social a {
+  color: $color_primary-light;
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ footer end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 

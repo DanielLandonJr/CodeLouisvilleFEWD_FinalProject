@@ -1,0 +1,91 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ parallax start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+.pimg1, .pimg2, .pimg3, .pimg4 {
+  width: 100%;
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pimg1 {
+  background-image: url(../img/louisville.jpg);
+  min-height: 100vh;
+}
+
+.pimg2 {
+  background-image: url(../img/img2.jpeg);
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url(../img/img3.jpeg);
+  min-height: 400px;
+}
+
+.pimg4 {
+  background-image: url(../img/louisville.jpg);
+  min-height: 100vh;
+}
+
+img {
+  margin: 0px;
+  padding: 0px;
+}
+
+.section {
+  text-align: center;
+  padding: 25px 80px 25px 80px;
+  font-size: 2em;
+  border-left: 3px solid $color_secondary;
+  border-right: 3px solid $color_secondary;
+  transition: 0.5s;
+}
+
+.section span i {
+  color: $color_secondary;
+}
+
+.section-light {
+  background-color: $color_primary-light;
+  color: $color_primary-text;
+}
+
+.section-dark {
+  background-color: $color_primary-dark;
+  color: $color_primary-text;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: $color_primary-text;
+  font-size: 2.7em;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.border {
+  background-color: $color_secondary;
+  color: $color_primary-text;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ parallax end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 

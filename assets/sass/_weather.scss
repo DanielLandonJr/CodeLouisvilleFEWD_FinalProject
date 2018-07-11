@@ -1,0 +1,91 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ weather underground start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+#weather_information {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(4, auto-fit);
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+#weather_change-location,
+#weather_message,
+#weather_display-data,
+#weather_footer {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#weather_display-data {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(6, auto-fit);
+}
+
+#weather_information  h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+#weather_change-location {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(2, auto-fit);
+}
+
+#weather_location-information,
+#weather_location-buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 5% 1fr;
+}
+
+#weather_location-city,
+#weather_location-state {
+  justify-self: center;
+}
+
+#weather_change-location i {
+  align-self: center;
+}
+
+#weather_display-data {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: repeat(6, auto-fit);
+}
+
+#weather_details {
+  list-style-type: none;
+  padding: 0px;
+  color: $color_secondary-text;
+  background-color: $color_3rdComp;
+  border-bottom: 1px solid $color_primary-light;
+}
+
+#weather_details li {
+  border-bottom: 1px solid $color_primary-light;
+  padding: 10px 0px 10px 0px;
+}
+
+#weather_details {
+  box-shadow: $shadow;
+}
+
+#weather_data-icon {
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ weather underground end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 

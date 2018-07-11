@@ -1,0 +1,132 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ base start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* need to figure this one out...using normalize messes up 62.5% font size */
+  font-size: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: $color_primary;
+  box-sizing: border-box;
+}
+
+.u_hide {
+  display: none;
+}
+
+.roundedCorners {
+  border-radius: 1rem;
+}#container {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr);
+}
+
+input[type='text'],
+#selectLanguage {
+  border-radius: 5px;
+  box-shadow: $shadow;
+}
+
+.card{
+  color: $color_primary-text;
+  background: $color_4thComp;
+  width: 290px;
+  box-shadow: 2px 2px 3px $color_primary-dark;
+  border: 1px solid $color_secondary;
+  border-top: 10px solid $color_secondary;
+  border-bottom: 10px solid $color_secondary;
+  min-height: 250px;
+  padding: 3px;
+  margin: 3px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 550;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#card_close {
+  text-align: center;
+  font-size: 1em;
+}
+
+.card p {
+  font-size: 2em;
+}
+
+.card h1 {
+  text-align: center;
+  font-size: 2.6em;
+}
+
+.card i {
+  color: $color_secondary;
+}
+
+.card hr {
+  border-color: $color_secondary;
+}
+
+/* app sections */
+ 
+#polarClock {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: minmax(1px, auto-fit);
+  grid-template-columns: minmax(1px, 320px) 1fr;
+  align-items: center;
+}
+
+#app1,
+#app2 {
+  display: grid;
+  grid-template-rows: auto-fit;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.myButton {
+	/* box-shadow: 0px 0px 0px 2px #9fb4f2; */
+	background:linear-gradient(to bottom, $color_primary-light 5%, $color_primary-dark 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1.4em;
+	font-weight:bold;
+  padding: 10px;
+  margin-top: 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+  box-shadow: $shadow;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, $color_primary-dark 5%, $color_primary-light 100%);
+	background-color:#476e9e;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ base end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
