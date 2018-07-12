@@ -79,16 +79,19 @@ const ParallaxDesign = (() => {
       //   });
 
       // this one works
-      // let myRequest = new Request('../../assets/js/language.html');
-      // fetch(myRequest)
-      //   .then((response) => {
-      //     return response.text();
-      //   }).then((text) => {
-      //     // console.log(text);
-      //     document.querySelector('#app1_AJAX_content').innerHTML = text;
-      //   }).catch((error) => {
-      //     console.log(`Fetch Error =\n`, error);
-      //   });
+      let myRequest = new Request('../../assets/js/language.html');
+      fetch(myRequest)
+        .then((response) => {
+          return response.text();
+        }).then((text) => {
+          // console.log(text);
+          debugger
+          document.querySelector('#app1_AJAX_content').innerHTML = text;
+
+          lang.ApplicationLocalization.init();
+        }).catch((error) => {
+          console.log(`Fetch Error =\n`, error);
+        });
 
 
 
@@ -99,7 +102,7 @@ const ParallaxDesign = (() => {
 
       particles.ParticleSetup.init();
 
-      lang.ApplicationLocalization.init();
+      // lang.ApplicationLocalization.init();
 
       weather.WeatherUnderground.init();
 

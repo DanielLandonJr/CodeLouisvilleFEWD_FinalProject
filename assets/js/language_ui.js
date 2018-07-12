@@ -10,6 +10,7 @@ export const UI = (() => {
   // public methods
   return {
     loadUI: () => {
+      debugger
       loadData.classList.add('u_hide');
       chooseLanguage.classList.remove('u_hide');
       languages.classList.remove('u_hide');
