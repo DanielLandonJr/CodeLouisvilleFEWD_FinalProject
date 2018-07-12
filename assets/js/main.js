@@ -3,8 +3,13 @@ import * as particles from './particleSetup.js?version=1.0.1';
 import * as sm from './sideMenu.js?version=1.0.1';
 import * as lang from './language_main.js?version=1.0.1';
 import * as weather from './weather_main.js?version=1.0.1';
+import * as inWin from './inWindow.js?version=1.0.1';
 
 const ParallaxDesign = (() => {
+  const app1_container = document.querySelector('#app-1_container');
+  const app2_container = document.querySelector('#app-2_container');
+  const app1_button = document.querySelector('#app-1_button');
+  const app2_button = document.querySelector('#app-2_button');
 
   document.addEventListener('DOMContentLoaded', () => {
     console.log('loaded');
@@ -15,27 +20,27 @@ const ParallaxDesign = (() => {
       document.querySelector('.card').classList.add('u_hide');
     })
 
-    document.querySelector('#app-1_button').addEventListener('click', toggleApp1);
-    document.querySelector('#app-2_button').addEventListener('click', toggleApp2);
+    app1_button.addEventListener('click', toggleApp1);
+    app2_button.addEventListener('click', toggleApp2);
   };
 
   const toggleApp1 = (even) => {
-    if (document.querySelector('#app-1_container').className === 'u_hide') {
-      document.querySelector('#app-1_container').classList.remove('u_hide');
-      document.querySelector('#app-1_button').innerHTML = 'Hide Language Localization';
+    if (app1_container.className === 'u_hide') {
+      app1_container.classList.remove('u_hide');
+      app1_button.innerHTML = 'Hide Language Localization';
     } else {
-      document.querySelector('#app-1_container').classList.add('u_hide');
-      document.querySelector('#app-1_button').innerHTML = 'Show Language Localization';
+      app1_container.classList.add('u_hide');
+      app1_button.innerHTML = 'Show Language Localization';
     }
   };
 
   const toggleApp2 = () => {
-    if (document.querySelector('#app-2_container').className === 'u_hide') {
-      document.querySelector('#app-2_container').classList.remove('u_hide');
+    if (app2_container.className === 'u_hide') {
+      app2_button.classList.remove('u_hide');
       document.querySelector('#app-2_button').innerHTML = 'Hide Weather Underground';
     } else {
-      document.querySelector('#app-2_container').classList.add('u_hide');
-      document.querySelector('#app-2_button').innerHTML = 'Show Weather Underground';
+      app2_container.classList.add('u_hide');
+      app2_button.innerHTML = 'Show Weather Underground';
     }
   };
 
@@ -72,6 +77,8 @@ const ParallaxDesign = (() => {
       lang.ApplicationLocalization.init();
 
       weather.WeatherUnderground.init();
+
+      inWin.InWindow.init();
 
       loadEventListeners();
 

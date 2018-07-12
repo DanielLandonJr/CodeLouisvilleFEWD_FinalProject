@@ -18,13 +18,22 @@ body, html {
   box-sizing: border-box;
 }
 
+#pText_card {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+}
+
 .u_hide {
   display: none;
 }
 
 .roundedCorners {
   border-radius: 1rem;
-}#container {
+}
+
+#container {
   display: grid;
   grid-template-columns: minmax(320px, 1fr);
 }
@@ -33,6 +42,15 @@ input[type='text'],
 #selectLanguage {
   border-radius: 5px;
   box-shadow: $shadow;
+}
+
+#message_card {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 550;
 }
 
 .card{
@@ -46,12 +64,6 @@ input[type='text'],
   min-height: 250px;
   padding: 3px;
   margin: 3px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 550;
-  cursor: pointer;
-  transition: 0.5s;
 }
 
 #card_close {

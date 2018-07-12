@@ -321,6 +321,54 @@ template {
 /* 
 
 */
+/* ~~~~~~~~~~~~~~~ animations start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/
+@keyframes scaleButton {
+  0% { }
+  50% {
+    transform: scale(1.25); }
+  100% {
+    transform: rotate(xx) scale(1); } }
+
+.scaleOut {
+  animation-name: scaleButton;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out; }
+
+@keyframes kf_rotateIn {
+  0% {
+    transform: rotate(0deg) scale(0) translateX(-390px) translateY(0px);
+    opacity: 0; }
+  100% {
+    transform: rotate(-360deg) scale(1) translateX(0px) translateY(0px);
+    opacity: 1; } }
+
+@keyframes kf_rotateOut {
+  0% {
+    transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
+    opacity: 1; }
+  100% {
+    transform: rotate(-360deg) scale(0) translateX(-390px) translateY(0px);
+    opacity: 0; } }
+
+.rotateIn {
+  animation: kf_rotateIn 2s ease-in-out; }
+
+.rotateOut {
+  animation: kf_rotateOut 2s ease-in-out; }
+
+/* 
+
+*/
+/* ~~~~~~~~~~~~~~~ animations end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/
+/* 
+
+*/
 /* ~~~~~~~~~~~~~~~ base start ~~~~~~~~~~~~~~~ */
 /* 
 
@@ -335,6 +383,12 @@ body, html {
   font-weight: 400;
   color: #673ab7;
   box-sizing: border-box; }
+
+#pText_card {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 20; }
 
 .u_hide {
   display: none; }
@@ -351,6 +405,14 @@ input[type='text'],
   border-radius: 5px;
   box-shadow: 1px 1px 2px 1px #000; }
 
+#message_card {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 550; }
+
 .card {
   color: #f4f4f4;
   background: #b73a89;
@@ -361,13 +423,7 @@ input[type='text'],
   border-bottom: 10px solid #89b73a;
   min-height: 250px;
   padding: 3px;
-  margin: 3px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 550;
-  cursor: pointer;
-  transition: 0.5s; }
+  margin: 3px; }
 
 #card_close {
   text-align: center;
