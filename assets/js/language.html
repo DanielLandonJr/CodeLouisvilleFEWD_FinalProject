@@ -1,34 +1,34 @@
-<div id="content">
-  <section id="loadData">
-    <h1>Loading</h1>
-    <span class="loadSpinner"></span>
+<div id='content'>
+  <section id='loadData'>
+    <!-- <h1>Loading</h1> -->
+    <span class='loadSpinner'></span>
   </section>
 
-  <section id="chooseLanguage" class="u_hide">
-    <label for="selectLanguage">Translation by Google</label>
-    <select id="selectLanguage">
-      <option value="" selected disabled>Choose Language</option>
-      <option value="English">English</option>
-      <option value="Chinese">Chinese (Simplified)</option>
-      <option value="Japanese">Japanese</option>
-      <option value="Latin">Latin</option>
-      <option value="Russian">Russian</option>
-      <option value="Gaelic">Scots Gaelic</option>
+  <section id='chooseLanguage' class='u_hide'>
+    <label for='selectLanguage'>Translation by Google</label>
+    <select id='selectLanguage'>
+      <option value='' selected disabled>Choose Language</option>
+      <option value='English'>English</option>
+      <option value='Chinese'>Chinese (Simplified)</option>
+      <option value='Japanese'>Japanese</option>
+      <option value='Latin'>Latin</option>
+      <option value='Russian'>Russian</option>
+      <option value='Gaelic'>Scots Gaelic</option>
     </select>
     <br>
     <span>Click Button Below To Close</span>
   </section>
 
 
-  <section id="languages" class="u_hide">
-    <section id="default" class="u_hide">
-      <h3>"
-        <span class="title">title</span>"</h3>
+  <section id='languages' class='u_hide'>
+    <section id='default' class='u_hide'>
+      <h3>'
+        <span class='title'>title</span>'</h3>
       <p>by
-        <span class="author">author</span> in
-        <span class="language">default</span>
+        <span class='author'>author</span> in
+        <span class='language'>default</span>
       </p>
-      <p class="firstLetter">
+      <p class='firstLetter'>
         <span class='local1 firstLetter'>default 1</span>
         <br>
         <span class='local2'>default 2</span>
@@ -37,7 +37,7 @@
         <br>
         <span class='local4'>default 4</span>
       </p>
-      <p class="firstLetter">
+      <p class='firstLetter'>
         <span class='local5'>default 5</span>
         <br>
         <span class='local6'>default 6</span>
@@ -48,7 +48,7 @@
         <br>
         <span class='local9'>default 9</span>
       </p>
-      <p class="firstLetter">
+      <p class='firstLetter'>
         <span class='local10'>default 10</span>
         <br>
         <span class='local11'>default 11</span>
@@ -69,14 +69,14 @@
       </p>
     </section>
 
-    <section id="translations" class="u_hide">
-      <h3>"
-        <span class="title">title</span>"</h3>
+    <section id='translations' class='u_hide'>
+      <h3>'
+        <span class='title'>title</span>'</h3>
       <p>by
-        <span class="author">author</span> in
-        <span class="language">default</span>
+        <span class='author'>author</span> in
+        <span class='language'>default</span>
       </p>
-      <p class="firstLetter">
+      <p class='firstLetter'>
         <span class='local1'>translation 1</span>
         <br>
         <span class='local2'>translation 2</span>
@@ -85,7 +85,7 @@
         <br>
         <span class='local4'>translation 4</span>
       </p>
-      <p class="firstLetter">
+      <p class='firstLetter'>
         <span class='local5'>translation 5</span>
         <br>
         <span class='local6'>translation 6</span>
@@ -96,7 +96,7 @@
         <br>
         <span class='local9'>translation 9</span>
       </p>
-      <p class="firstLetter">
+      <p class='firstLetter'>
         <span class='local10'>translation 10</span>
         <br>
         <span class='local11'>translation 11</span>
@@ -117,12 +117,12 @@
       </p>
     </section>
 
-    <section id="characters" class="u_hide">
-      <h3>"
-        <span class="title">title</span>"</h3>
+    <section id='characters' class='u_hide'>
+      <h3>'
+        <span class='title'>title</span>'</h3>
       <p>by
-        <span class="author">author</span> in
-        <span class="language">default</span>
+        <span class='author'>author</span> in
+        <span class='language'>default</span>
       </p>
       <p>
         <span class='local1'>characters 1</span>
@@ -166,3 +166,12 @@
     </section>
   </section>
 </div>
+
+<script>
+  console.log('JavaScript in language.html');
+
+  document.querySelector('#languages').classList.remove('u_hide');
+  document.querySelector('#default').classList.remove('u_hide');
+  document.querySelector('#translations').classList.remove('u_hide');
+  document.querySelector('#characters').classList.remove('u_hide');
+</script>

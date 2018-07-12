@@ -58,7 +58,13 @@ export const ApplicationLocalization = (() => {
 
   // public methods
   return {
-    init: () => {
+    init: (htmlHook) => {
+      // tried using generated html from javascript...did not work
+      // did not actually create html using createElement instead i tried the 
+      // template trick with the html added to innerHtml of tag. this is basically the same thing i tried previosuly just in code instead of ajax
+
+      // UI_Ctrl.UI.generateUI(htmlHook);
+
       // initialize firebase
       firebase.initializeApp(config);
 

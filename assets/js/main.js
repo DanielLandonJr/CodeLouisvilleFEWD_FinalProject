@@ -69,29 +69,22 @@ const ParallaxDesign = (() => {
   // public methods
   return {
     init: () => {
-      // document.querySelector('#app1_AJAX_content').innerHTML = ajaxLoad('language.html');
-
-      // http.easyHTTP.get('../../assets/js/language.html')
-      //   .then((response) => {
-      //     console.log(response);
-      //   }).catch((error) => {
-      //     console.log(`Fetch Error =\n`, error);
-      //   });
 
       // this one works
-      let myRequest = new Request('../../assets/js/language.html');
-      fetch(myRequest)
-        .then((response) => {
-          return response.text();
-        }).then((text) => {
-          // console.log(text);
-          debugger
-          document.querySelector('#app1_AJAX_content').innerHTML = text;
+      const testCode = () => {
+        let myRequest = new Request('../../assets/js/language.html');
+        fetch(myRequest)
+          .then((response) => {
+            return response.text();
+          }).then((text) => {
+            // this will load html to page...but it does not work with javascript
+            document.querySelector('#app1_AJAX_content').innerHTML = text;
 
-          lang.ApplicationLocalization.init();
-        }).catch((error) => {
-          console.log(`Fetch Error =\n`, error);
-        });
+            lang.ApplicationLocalization.init('#app1_AJAX_content');
+          }).catch((error) => {
+            console.log(`Fetch Error =\n`, error);
+          });
+      };
 
 
 
@@ -102,7 +95,12 @@ const ParallaxDesign = (() => {
 
       particles.ParticleSetup.init();
 
-      // lang.ApplicationLocalization.init();
+      // comment this out to disable test code
+      // testCode();
+
+      // uncomment to return code to functional state
+      // dont forget to comment/uncomment hard html otherwise everything will double up
+      lang.ApplicationLocalization.init();
 
       weather.WeatherUnderground.init();
 

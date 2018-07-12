@@ -538,13 +538,13 @@ input[type='text'],
   position: fixed;
   top: 20%;
   left: 50%;
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
   margin-top: -40px;
   margin-left: -40px;
   border-radius: 50%;
-  border-top: 2px solid #673ab7;
-  border-right: 2px solid transparent;
+  border-top: 5px solid #9a67ea;
+  border-right: 5px solid transparent;
   animation: spinner 0.7s linear infinite; }
 
 @keyframes spinner {
