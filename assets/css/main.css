@@ -382,7 +382,8 @@ body, html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   color: #673ab7;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transform: translate3d(0); }
 
 #pText_card {
   position: fixed;
@@ -392,6 +393,9 @@ body, html {
 
 .u_hide {
   display: none; }
+
+.u_willnotrender {
+  transform: translateZ(0); }
 
 .roundedCorners {
   border-radius: 1rem; }
@@ -411,7 +415,7 @@ input[type='text'],
   left: 5px;
   cursor: pointer;
   transition: 0.5s;
-  z-index: 550; }
+  z-index: 650; }
 
 .card {
   color: #f4f4f4;
@@ -735,7 +739,7 @@ img {
   height: 100%;
   width: 0px;
   position: fixed;
-  z-index: 505;
+  z-index: 600;
   top: 0px;
   left: 0px;
   background-color: #673ab7;
@@ -758,14 +762,16 @@ img {
 #side-menu_stats {
   display: grid;
   justify-self: center;
-  align-self: center; }
+  align-self: center;
+  z-index: 550; }
 
 #side-menu_close-arrow {
   position: absolute;
   top: 5px;
   left: 0px;
   color: #89b73a;
-  transition: 0.5s; }
+  transition: 0.5s;
+  z-index: 550; }
 
 #side-menu_scroll-down {
   position: absolute;
@@ -786,7 +792,7 @@ img {
   text-transform: uppercase;
   color: #fff;
   padding: 3px;
-  z-index: calc($zIndex_overlay + 1);
+  z-index: 550;
   transition: 0.5s; }
 
 .side-menu_close-message {
@@ -797,7 +803,8 @@ img {
   font-size: 2.7em;
   text-transform: uppercase;
   color: #f4f4f4;
-  padding: 15px; }
+  padding: 15px;
+  z-index: 550; }
 
 #side-menu-back {
   height: 0vh;
@@ -837,7 +844,7 @@ img {
 
 */
 /* ~~~~~~~~~~~~~~~ side menu end ~~~~~~~~~~~~~~~ */
-/* 
+/*
 
 */
 /* 

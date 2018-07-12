@@ -4,6 +4,7 @@ import * as sm from './sideMenu.js?version=1.0.1';
 import * as lang from './language_main.js?version=1.0.1';
 import * as weather from './weather_main.js?version=1.0.1';
 import * as inWin from './inWindow.js?version=1.0.1';
+import * as http from './easyHTTP.js?version=1.0.1';
 
 const ParallaxDesign = (() => {
   const app1_container = document.querySelector('#app-1_container');
@@ -12,7 +13,7 @@ const ParallaxDesign = (() => {
   const app2_button = document.querySelector('#app-2_button');
 
   document.addEventListener('DOMContentLoaded', () => {
-    console.log('loaded');
+
   });
 
   const loadEventListeners = () => {
@@ -36,38 +37,62 @@ const ParallaxDesign = (() => {
 
   const toggleApp2 = () => {
     if (app2_container.className === 'u_hide') {
-      app2_button.classList.remove('u_hide');
-      document.querySelector('#app-2_button').innerHTML = 'Hide Weather Underground';
+      app2_container.classList.remove('u_hide');
+      app2_button.innerHTML = 'Hide Weather Underground';
     } else {
       app2_container.classList.add('u_hide');
       app2_button.innerHTML = 'Show Weather Underground';
     }
   };
 
-  const parallaxImage = () => {
-    const imgArr = document.querySelectorAll('.pimg4 img');
+  // const parallaxImage = () => {
+  //   const imgArr = document.querySelectorAll('.pimg4 img');
 
-    let xTemp = 0;
+  //   let xTemp = 0;
 
-    imgArr.forEach(element1 => {
-      element1.setAttribute("data-index", xTemp += 2);
+  //   imgArr.forEach(element1 => {
+  //     element1.setAttribute("data-index", xTemp += 2);
 
-      element1.addEventListener('mousemove', (element2) => {
-        imgArr.forEach(e => {
-          let divisor = parseInt(e.getAttribute("data-index"));
-          let startX = e.offsetWidth;
-          let startY = e.offsetHeight;
+  //     element1.addEventListener('mousemove', (element2) => {
+  //       imgArr.forEach(e => {
+  //         let divisor = parseInt(e.getAttribute("data-index"));
+  //         let startX = e.offsetWidth;
+  //         let startY = e.offsetHeight;
 
-          e.style.left = (((element2.target.screenX / divisor) - element2.clientX) / 3) + 'px';
-          e.style.top = (((element2.screenY / divisor) - element2.clientY) / 3) + 'px';
-        });
-      });
-    });
-  };
+  //         e.style.left = (((element2.target.screenX / divisor) - element2.clientX) / 3) + 'px';
+  //         e.style.top = (((element2.screenY / divisor) - element2.clientY) / 3) + 'px';
+  //       });
+  //     });
+  //   });
+  // };
 
   // public methods
   return {
     init: () => {
+      // document.querySelector('#app1_AJAX_content').innerHTML = ajaxLoad('language.html');
+
+      // http.easyHTTP.get('../../assets/js/language.html')
+      //   .then((response) => {
+      //     console.log(response);
+      //   }).catch((error) => {
+      //     console.log(`Fetch Error =\n`, error);
+      //   });
+
+      // this one works
+      // let myRequest = new Request('../../assets/js/language.html');
+      // fetch(myRequest)
+      //   .then((response) => {
+      //     return response.text();
+      //   }).then((text) => {
+      //     // console.log(text);
+      //     document.querySelector('#app1_AJAX_content').innerHTML = text;
+      //   }).catch((error) => {
+      //     console.log(`Fetch Error =\n`, error);
+      //   });
+
+
+
+
       sm.SideMenu.init();
 
       pc.PolarClock.init(300);

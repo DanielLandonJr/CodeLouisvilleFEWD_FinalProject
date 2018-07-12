@@ -21,7 +21,7 @@
   height: 100%;
   width: 0px;
   position: fixed;
-  z-index: $zIndex_sideMenu;
+  z-index: 600;
   top: 0px;
   left: 0px;
   background-color: $color_primary;
@@ -48,6 +48,7 @@
   display: grid;
   justify-self: center;
   align-self: center;
+  z-index: 550;
 }
 
 #side-menu_close-arrow {
@@ -56,6 +57,7 @@
   left: 0px;
   color: $color_secondary;
   transition: 0.5s;
+  z-index: 550;
 }
 
 #side-menu_scroll-down {
@@ -78,7 +80,7 @@
   text-transform: uppercase;
   color: #fff;
   padding: 3px;
-  z-index: calc($zIndex_overlay + 1);
+  z-index: 550;
   transition: 0.5s;
 }
 
@@ -91,13 +93,14 @@
   text-transform: uppercase;
   color: $color_primary-text;
   padding: 15px;
+  z-index: 550;
 }
 
 #side-menu-back {
   height: 0vh;
   width: 0vw;
   position: fixed;
-  z-index: $zIndex_overlay;
+  z-index: 500;
   top: 0px;
   left: 0px;
   background-color: #111;
@@ -136,6 +139,6 @@
 
 */ 
 /* ~~~~~~~~~~~~~~~ side menu end ~~~~~~~~~~~~~~~ */
-/* 
+/*
 
-*/ 
+*/

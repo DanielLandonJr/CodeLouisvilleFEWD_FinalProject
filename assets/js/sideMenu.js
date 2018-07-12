@@ -14,7 +14,7 @@ export const SideMenu = (() => {
   const menuSelection = (event) => {
     let xText = String(event.target.innerHTML).toLowerCase();
 
-    // if xText does not have old fewd site then display CanvasRenderingContext2D...otherwise load old site
+    // if xText does not have old fewd site then display ..otherwise load old site
     if (!xText.includes('old fewd site')) {
       document.querySelector('#card_title').innerHTML = '';
       document.querySelector('#card_message-primary').innerHTML = '';
@@ -36,6 +36,13 @@ export const SideMenu = (() => {
     };
   };
 
+  // const reflow = (element) => {
+  //   if (element === undefined) {
+  //     element = document.documentElement;
+  //   }
+  //   void (element.offsetHeight);
+  // }
+
   const toggleSideMenu = () => {
     // alert('click');
     if (sideMenuOverlay.style.height === '0vh') {
@@ -43,6 +50,8 @@ export const SideMenu = (() => {
       document.querySelector('#side-menu').style.width = '250px';
       sideMenuOverlay.style.height = '100vh';
       sideMenuOverlay.style.width = '100vw';
+
+      // reflow(document.querySelector('#particles-js'));
 
       document.querySelector('#side-menu_close-arrow').style.left = '265px';
     } else {

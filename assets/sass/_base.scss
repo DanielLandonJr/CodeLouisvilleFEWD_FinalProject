@@ -16,6 +16,7 @@ body, html {
   font-weight: 400;
   color: $color_primary;
   box-sizing: border-box;
+  transform: translate3d(0);
 }
 
 #pText_card {
@@ -27,6 +28,10 @@ body, html {
 
 .u_hide {
   display: none;
+}
+
+.u_willnotrender { 
+  transform: translateZ(0); 
 }
 
 .roundedCorners {
@@ -50,7 +55,7 @@ input[type='text'],
   left: 5px;
   cursor: pointer;
   transition: 0.5s;
-  z-index: 550;
+  z-index: 650;
 }
 
 .card{
