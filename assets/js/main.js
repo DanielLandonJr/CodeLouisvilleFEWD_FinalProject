@@ -4,7 +4,6 @@ import * as sm from './sideMenu.js?version=1.0.1';
 import * as lang from './language_main.js?version=1.0.1';
 import * as weather from './weather_main.js?version=1.0.1';
 import * as inWin from './inWindow.js?version=1.0.1';
-import * as http from './easyHTTP.js?version=1.0.1';
 
 const ParallaxDesign = (() => {
   const app1_container = document.querySelector('#app-1_container');
@@ -13,7 +12,7 @@ const ParallaxDesign = (() => {
   const app2_button = document.querySelector('#app-2_button');
 
   document.addEventListener('DOMContentLoaded', () => {
-
+    console.warn('JavaScript Loaded ...');
   });
 
   const loadEventListeners = () => {
@@ -69,50 +68,31 @@ const ParallaxDesign = (() => {
   // public methods
   return {
     init: () => {
-
-      // this one works
-      const testCode = () => {
-
-        $("#app1_AJAX_content").load("../../assets/js/language.html", () => {
-          console.log("Load was performed.");
-
-          lang.ApplicationLocalization.init();
-        });
-
-        // this one loads the html
-        // let myRequest = new Request('../../assets/js/language.html');
-        // fetch(myRequest)
-        //   .then((response) => {
-        //     return response.text();
-        //   }).then((text) => {
-        //     // this will load html to page...but it does not work with javascript
-        //     document.querySelector('#app1_AJAX_content').innerHTML = text;
-
-        //     lang.ApplicationLocalization.init('#app1_AJAX_content');
-        //   }).catch((error) => {
-        //     console.log(`Fetch Error =\n`, error);
-        //   });
-      };
-
-
-
-
       sm.SideMenu.init();
 
       pc.PolarClock.init(300);
 
       particles.ParticleSetup.init();
 
-      // comment this out to disable test code
-      // testCode();
-
-      // uncomment to return code to functional state
-      // dont forget to comment/uncomment hard html otherwise everything will double up
-      lang.ApplicationLocalization.init();
-
-      weather.WeatherUnderground.init();
-
       inWin.InWindow.init();
+
+      fetch('../../assets/includes/language.html')
+        .then((response) => { return response.text(); })
+        .then((text) => {
+          document.querySelector('#app1_AJAX_content').innerHTML = text;
+          lang.ApplicationLocalization.init();
+        }).catch((error) => {
+          console.error(`Fetch Error =\n`, error);
+        });
+
+      fetch('../../assets/includes/weather.html')
+        .then((response) => { return response.text(); })
+        .then((text) => {
+          document.querySelector('#app2_AJAX_content').innerHTML = text;
+          weather.WeatherUnderground.init();
+        }).catch((error) => {
+          console.error(`Fetch Error =\n`, error);
+        });
 
       loadEventListeners();
 
