@@ -72,18 +72,26 @@ const ParallaxDesign = (() => {
 
       // this one works
       const testCode = () => {
-        let myRequest = new Request('../../assets/js/language.html');
-        fetch(myRequest)
-          .then((response) => {
-            return response.text();
-          }).then((text) => {
-            // this will load html to page...but it does not work with javascript
-            document.querySelector('#app1_AJAX_content').innerHTML = text;
 
-            lang.ApplicationLocalization.init('#app1_AJAX_content');
-          }).catch((error) => {
-            console.log(`Fetch Error =\n`, error);
-          });
+        $("#app1_AJAX_content").load("../../assets/js/language.html", () => {
+          console.log("Load was performed.");
+
+          lang.ApplicationLocalization.init();
+        });
+
+        // this one loads the html
+        // let myRequest = new Request('../../assets/js/language.html');
+        // fetch(myRequest)
+        //   .then((response) => {
+        //     return response.text();
+        //   }).then((text) => {
+        //     // this will load html to page...but it does not work with javascript
+        //     document.querySelector('#app1_AJAX_content').innerHTML = text;
+
+        //     lang.ApplicationLocalization.init('#app1_AJAX_content');
+        //   }).catch((error) => {
+        //     console.log(`Fetch Error =\n`, error);
+        //   });
       };
 
 
