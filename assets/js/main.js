@@ -109,7 +109,7 @@ const ParallaxDesign = (() => {
         mode: 'no-cors'
       };
 
-      fetch('../../assets/includes/language.html', myInit)
+      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject//assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
@@ -118,7 +118,7 @@ const ParallaxDesign = (() => {
           console.error(`Fetch Error =\n`, error);
         });
 
-      fetch('../../assets/includes/weather.html', myInit)
+      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject//assets/includes/weather.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app2_AJAX_content').innerHTML = text;
