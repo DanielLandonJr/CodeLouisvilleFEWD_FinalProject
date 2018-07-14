@@ -109,7 +109,7 @@ const ParallaxDesign = (() => {
         mode: 'no-cors'
       };
 
-      fetch('../../assets/includes/language.html', myInit)
+      fetch('https//assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
