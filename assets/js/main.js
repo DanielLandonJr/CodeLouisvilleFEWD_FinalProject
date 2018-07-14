@@ -1,8 +1,8 @@
-import * as pc from './polarClock.js?version=1.0.5';
-import * as sm from './sideMenu.js?version=1.0.5';
-import * as lang from './language_main.js?version=1.0.5';
-import * as weather from './weather_main.js?version=1.0.5';
-import * as inWin from './inWindow.js?version=1.0.5';
+import * as pc from './polarClock.js?version=1.0.7';
+import * as sm from './sideMenu.js?version=1.0.7';
+import * as lang from './language_main.js?version=1.0.7';
+import * as weather from './weather_main.js?version=1.0.7';
+import * as inWin from './inWindow.js?version=1.0.7';
 
 const ParallaxDesign = (() => {
   const app1_container = document.querySelector('#app-1_container');
@@ -109,7 +109,7 @@ const ParallaxDesign = (() => {
         mode: 'no-cors'
       };
 
-      fetch('https//assets/includes/language.html', myInit)
+      fetch('https://../../assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
