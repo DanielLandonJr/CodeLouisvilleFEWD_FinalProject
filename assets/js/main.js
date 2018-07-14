@@ -100,7 +100,7 @@ const ParallaxDesign = (() => {
 
       pc.PolarClock.init(300);
 
-      fetch('../../assets/includes/language.html')
+      fetch('http://cors.io/?u=../../assets/includes/language.html')
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
