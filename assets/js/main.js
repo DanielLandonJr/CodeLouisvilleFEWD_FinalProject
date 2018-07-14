@@ -99,8 +99,16 @@ const ParallaxDesign = (() => {
       sm.SideMenu.init();
 
       pc.PolarClock.init(300);
+      
+      let myHeaders = new Headers();
+      myHeaders.append('Content-Type', '');
+      
+      let myInit = { method: 'GET',
+               headers: myHeaders,
+               mode: 'cors',
+               cache: 'default' };
 
-      fetch('https://cors.io/?u=../../assets/includes/language.html')
+      fetch('../../assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
