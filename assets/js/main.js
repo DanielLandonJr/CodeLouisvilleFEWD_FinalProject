@@ -101,12 +101,11 @@ const ParallaxDesign = (() => {
       pc.PolarClock.init(300);
       
       let myHeaders = new Headers();
-      myHeaders.append('Content-Type', '');
+      myHeaders.append('Content-Type', 'txt/html');
       
       let myInit = { method: 'GET',
                headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+               mode: 'no-cors' };
 
       fetch('../../assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
