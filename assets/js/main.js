@@ -106,7 +106,7 @@ const ParallaxDesign = (() => {
       let myInit = {
         method: 'GET',
         headers: myHeaders,
-        mode: 'same-origin'
+        mode: 'cors'
       };
 
       fetch('../../assets/includes/language.txt', myInit)
