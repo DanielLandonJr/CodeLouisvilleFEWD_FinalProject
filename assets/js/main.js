@@ -99,13 +99,15 @@ const ParallaxDesign = (() => {
       sm.SideMenu.init();
 
       pc.PolarClock.init(300);
-      
+
       let myHeaders = new Headers();
-      myHeaders.append('Content-Type', 'txt/html');
-      
-      let myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'no-cors' };
+      myHeaders.append('Content-Type', 'text/html');
+
+      let myInit = {
+        method: 'GET',
+        headers: myHeaders,
+        mode: 'no-cors'
+      };
 
       fetch('../../assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
@@ -116,7 +118,7 @@ const ParallaxDesign = (() => {
           console.error(`Fetch Error =\n`, error);
         });
 
-      fetch('https://cors.io/?u=../../assets/includes/weather.html')
+      fetch('https://../../assets/includes/weather.html')
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app2_AJAX_content').innerHTML = text;
@@ -124,8 +126,6 @@ const ParallaxDesign = (() => {
         }).catch((error) => {
           console.error(`Fetch Error =\n`, error);
         });
-
-      // particles.ParticleSetup.init();
 
       inWin.InWindow.init();
 
