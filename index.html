@@ -16,7 +16,6 @@
 <body>
 
   <div id="container">
-
     <!-- message card -->
     <div id='message_card' class="card u_hide">
       <i class="fas fa-info-circle fa-5x"></i>
@@ -42,15 +41,11 @@
         </span>
       </div>
       <div class="side-menu_message">
-        <p>Too many particles will slow down the browser.</p>
-        <p>Resize browser to clear particles.</p>
+        <p>Enjoy The Twirley Thing!</p>
+        <p>FPS Will Go Back Up When You Close Side Menu.</p>
       </div>
-      <div id='particles-js'>
-        <span>Test</span>
-      </div>
-      <div class="count-particles">
-        <span class="js-count-particles">--</span> particles
-      </div>
+      <div id="stats-display"></div>
+      <div id="stats-graphic"></div>
     </div>
 
     <div id="side-menu" class="side-menu">
@@ -113,7 +108,7 @@
           <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The FPS & Particle Counters on the Side Menu.</span>
         <br>
         <span>
-          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Particle Effects on the side menu.</span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Weird Twirley Thing.</span>
         <br>
         <span>
           <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Amount of animation.</span>
@@ -144,6 +139,7 @@
 
     <section id='app1' class="section section-dark">
       <div id='app-1_container' class="u_hide">
+        <div id='app-1_close'>Close Application (all other apps disabled)</div>
         <!-- ajax load the content from external file -->
         <div id="app1_AJAX_content"></div>
       </div>
@@ -166,6 +162,7 @@
 
     <section id='app2' class="section section-dark">
       <div id='app-2_container' class="u_hide">
+        <div id='app-2_close'>Close Application (all other apps disabled)</div>
         <!-- ajax load the content from external file -->
         <div id="app2_AJAX_content"></div>
       </div>

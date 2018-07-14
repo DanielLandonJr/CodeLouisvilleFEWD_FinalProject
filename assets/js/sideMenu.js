@@ -63,9 +63,59 @@ export const SideMenu = (() => {
     }
   };
 
+  const setupStatGraphic = () => {
+    let stats = new Stats();
+    stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+    document.querySelector('#stats-display').appendChild(stats.dom);
+
+    let canvas = document.createElement('canvas');
+    let canvasWidth = 512;
+    let canvasHeight = 512;
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
+    canvas.style = `
+    position:absolute;
+    top: calc(50% - ${canvasHeight / 2}px);
+    right: calc(50% - ${canvasWidth / 2}px);
+    transition: 0.5s;
+    `;
+
+    document.querySelector('#stats-graphic').appendChild(canvas);
+    let context = canvas.getContext('2d');
+    context.fillStyle = 'rgba(127,0,255,0.05)';
+
+    function animate() {
+      // more animation code
+      let time = performance.now() / 1000;
+      context.clearRect(0, 0, 512, 512);
+
+      stats.begin();
+
+      // monitored code goes here
+      if (document.querySelector('#side-menu-back').style.height !== '0vh') {
+        // run only if side menu is ActiveXObject, otherwise it will keep eating fps even when closed
+        for (let i = 0; i < 2000; i++) {
+          let x = Math.cos(time + i * 0.01) * 196 + 256;
+          let y = Math.sin(time + i * 0.01234) * 196 + 256;
+          context.beginPath();
+          context.arc(x, y, 10, 0, Math.PI * 2, true);
+          context.fill();
+        }
+      }
+
+      stats.end();
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  };
+
   // public methods
   return {
     init: () => {
+      setupStatGraphic();
+
       loadEventListeners();
     }
   }

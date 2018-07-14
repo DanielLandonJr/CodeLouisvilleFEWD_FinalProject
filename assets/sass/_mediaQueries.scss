@@ -54,17 +54,21 @@
 
 /* applies to screens smaller than 700px */
 @media (max-width: 700px) {
-  .count-particles, 
-  #stats,
-  #side-menu_close-arrow,
-  .side-menu_message {
-    display: none;
+  #side-menu_close-arrow {
+    // display: none;
   }
 
   #app1, 
   #app2, 
   #polarClock {
     grid-template-columns: 1fr;
+  }
+}
+
+/* applies to screens smaller than 440px */
+@media (max-width: 440px) {
+  #side-menu_close-arrow {
+    display: none;
   }
 }
 
@@ -75,11 +79,12 @@
   }
 }
 
-/* applies to screens smaller than 960px */
+/* applies to screens smaller than 900px */
 @media (max-width: 960px) {
+  #stats-display,
+  #stats-graphic,
   .side-menu_message {
-    font-size: 1.6em;
-    transition: 0.5s;
+    display: none;
   }
 }
 

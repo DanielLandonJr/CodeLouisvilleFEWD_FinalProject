@@ -9,8 +9,9 @@
 #weather_information {
   display: grid;
   grid-gap: 5px;
-  grid-template-rows: repeat(4, auto-fit);
+  grid-template-rows: repeat(5, auto-fit);
   grid-template-columns: 1fr 2fr 1fr;
+  padding: 30px 0px 30px 0px;
 }
 
 #weather_change-location,
