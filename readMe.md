@@ -10,11 +10,12 @@
 
 This is the final project needed to complete the Code Louisville course. The landing page will contain all of the ["requirements"](https://github.com/CodeLouisville/Student-Resources/wiki/Front-End-Web-Development-Project-Requirements) necessary for project to be considered complete (based on requirements docs link above).
 
-- I will continue to develop other projects and include them with this project as seperate pages. Extra stuff to show my ***kung-fu*** is strong.
+- I will continue to develop other applications and include them with this project as seperate pages. Extra stuff to show my ***kung-fu*** is strong.
 - .nomedia files were included in all folders (make sure empty folders were included in repo).
 - Things to look for
   - ES6 Modules used throughout JavaScript.
   - Node-SASS used in development.
+  - Used AJAX to load Applications dynamically once main index.html was loaded.
   - Avoided using external libraries when possible. This is a demonstration of skill.
   - FireBase used for language localization.
   - API call to WeatherUnderground.
@@ -25,15 +26,15 @@ This is the final project needed to complete the Code Louisville course. The lan
 
 ### Responsive Design
 
-  - Site is good down to about 320 pixels.
+- Site is good down to about 320 pixels. Used CSS Grid for layout control.
 
 ### CSS
 
-  - Multiple customs selectors are scatter throught the CSS. I used NODE and installed SASS for the project. Browse project files to see what I did. Not comfortable with SASS setup, need to come up with a "standard" that I like.
+- Multiple customs selectors are scatter throught the CSS. I used NODE and installed SASS for the project. Browse project files to see what I did. Not comfortable with SASS setup, need to come up with a "standard" that I like.
 
 ### JavaScript
 
-  - There is much JavaScript in this project. Most of it is designed along ES6 modules.
+- There is much JavaScript in this project. Most of it is designed along ES6 modules.
 
 ### Comments
 
