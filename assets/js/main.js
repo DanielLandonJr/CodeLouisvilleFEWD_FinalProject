@@ -106,10 +106,10 @@ const ParallaxDesign = (() => {
       let myInit = {
         method: 'GET',
         headers: myHeaders,
-        mode: 'no-cors'
+        mode: 'cors'
       };
 
-      fetch('https://../../assets/includes/language.html', myInit)
+      fetch('../../assets/includes/language.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
@@ -118,7 +118,7 @@ const ParallaxDesign = (() => {
           console.error(`Fetch Error =\n`, error);
         });
 
-      fetch('https://../../assets/includes/weather.html', myInit)
+      fetch('../../assets/includes/weather.html', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app2_AJAX_content').innerHTML = text;
