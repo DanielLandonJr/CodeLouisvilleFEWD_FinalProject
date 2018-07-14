@@ -109,7 +109,7 @@ const ParallaxDesign = (() => {
         mode: 'no-cors'
       };
 
-      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/language.html', myInit)
+      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/language.html')
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
