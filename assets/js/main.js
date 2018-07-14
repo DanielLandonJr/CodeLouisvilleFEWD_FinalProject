@@ -101,7 +101,7 @@ const ParallaxDesign = (() => {
       pc.PolarClock.init(300);
 
       let myHeaders = new Headers();
-      myHeaders.append('Content-Type', 'text/html');
+      myHeaders.append('Content-Type', 'text/plain');
 
       let myInit = {
         method: 'GET',
@@ -109,7 +109,7 @@ const ParallaxDesign = (() => {
         mode: 'same-origin'
       };
 
-      fetch('https://assets/includes/language.html', myInit)
+      fetch('../../assets/includes/language.txt', myInit)
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app1_AJAX_content').innerHTML = text;
