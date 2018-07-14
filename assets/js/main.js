@@ -109,7 +109,7 @@ const ParallaxDesign = (() => {
           console.error(`Fetch Error =\n`, error);
         });
 
-      fetch('../../assets/includes/weather.html')
+      fetch('https://cors.io/?u=../../assets/includes/weather.html')
         .then((response) => { return response.text(); })
         .then((text) => {
           document.querySelector('#app2_AJAX_content').innerHTML = text;
