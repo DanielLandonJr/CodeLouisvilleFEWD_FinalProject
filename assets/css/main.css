@@ -773,7 +773,7 @@ img {
   right: 20px;
   font-size: 2.7em;
   text-transform: uppercase;
-  color: #fff;
+  color: #f4f4f4;
   padding: 3px;
   z-index: 550;
   text-align: right;
@@ -782,13 +782,14 @@ img {
 .side-menu_close-message {
   position: absolute;
   top: 0px;
-  left: 50px;
+  left: 55px;
   text-align: center;
-  font-size: 2.7em;
+  font-size: 1em;
   text-transform: uppercase;
   color: #f4f4f4;
-  padding: 15px;
-  z-index: 550; }
+  padding-top: 10px;
+  z-index: 550;
+  text-align: left; }
 
 #side-menu-back {
   height: 0vh;
