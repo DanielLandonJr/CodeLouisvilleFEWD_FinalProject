@@ -1,6 +1,6 @@
-import * as Storage_Ctrl from './weather_storage.js';
-import * as UI_Ctrl from './weather_ui.js';
-import * as Weather_Ctrl from './weather_weather.js';
+import * as Storage_Ctrl from './weather_storage.js?version=1.5.25';
+import * as UI_Ctrl from './weather_ui.js?version=1.5.25';
+import * as Weather_Ctrl from './weather_weather.js?version=1.5.25';
 
 export const WeatherUnderground = (() => {
   let location = '';

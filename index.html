@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -236,4 +237,227 @@
   <script src="./assets/js/main.js" type="module"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parallax</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./assets/css/main.css?version=1.5.25">
+</head>
+
+<body>
+
+  <div id="container">
+    <!-- message card -->
+    <div id='message_card' class="card u_hide">
+      <i class="fas fa-info-circle fa-5x"></i>
+      <h1 id='card_title'>Card Title</h1>
+      <hr>
+      <p id='card_message-primary'>Card Message Primary</p>
+      <p id="card_message-secondary">Card Message Secondary</p>
+      <p id='card_close'>Click Card to Close</p>
+    </div>
+
+    <!-- side menu -->
+    <div id="menuButton">
+      <span>
+        <i class="fas fa-bars fa-5x" title="Side Menu"></i>
+      </span>
+    </div>
+
+    <div id="side-menu-back">
+      <div id='side-menu_close-arrow'>
+        <span>
+          <i class="fas fa-arrow-circle-left fa-5x"></i>
+          <span class="side-menu_close-message">close</span>
+        </span>
+      </div>
+      <div class="side-menu_message">
+        <p>Enjoy The Twirley Thing!</p>
+        <p>FPS Will Go Back Up When You Close Side Menu.</p>
+      </div>
+      <div id="stats-display"></div>
+      <div id="stats-graphic"></div>
+    </div>
+
+    <div id="side-menu" class="side-menu">
+      <section id='side-menu_close-button'>
+        <img src="./assets/img/forgeApes_512_BASE.svg" class="close-side-menu" title="Close Menu">
+      </section>
+      <section id='side-menu_links'>
+        <a href="#">
+          <i class="fas fa-home"></i> Home</a>
+        <a href="#">
+          <i class="fas fa-atlas"></i> About</a>
+        <a href="#">
+          <i class="fas fa-screwdriver"></i> Services</a>
+        <a href="#">
+          <i class="fas fa-envelope"></i> Contact</a>
+        <a href="./oldSite/index.html" target="_blank">
+          <i class="fab fa-chrome"></i> Old FEWD Site</a>
+      </section>
+      <section id='side-menu_winston'>
+        <span>"The Grid. A digital frontier. I tried to picture clusters of information as they moved through the computer. What
+          did they look like? Ships? motorcycles? Were the circuits like freeways? I kept dreaming of a world I thought I'd
+          never see. And then, one day...I got in." ― Kevin Flynn, TRON: Legacy 2010</span>
+      </section>
+    </div>
+
+    <div id="side-menu_scroll-down">
+      <div>
+        <span>
+          <i class="fas fa-arrow-circle-down fa-5x"></i>
+        </span>
+      </div>
+    </div>
+    <!-- end side menu -->
+
+    <!-- parallax section -->
+    <div class="pimg1">
+      <div class="ptext">
+        <span id="ptext1" class="border">profession</span>
+      </div>
+    </div>
+
+    <section id='polarClock' class="section section-light">
+      <div id="clock">
+        <canvas title="" id="myCanvas" style="border:1px solid#000"></canvas>
+      </div>
+      <div>
+        <h2>What's going on here?</h2>
+        <p>This site is over-designed and
+          <strong>"busy"</strong>.</p>
+        <p>There are a lot of things in the site that just don't make any sense.</p>
+        <p>
+          <strong>
+            <em>That's the point!</em>
+          </strong> This is a site to demonstrate various skills.
+        </p>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Side Menu.</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The FPS & Particle Counters on the Side Menu.</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Weird Twirley Thing.</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;The Amount of animation.</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;Also the colors may seem a bit weird ... but they work on a color wheel so we will "roll" with it.</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;A Polar Clock???</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;You should see the code!</span>
+        <br>
+        <span>
+          <i class="fas fa-arrow-alt-circle-right"></i>&nbsp;ES6 Modules, SASS => CSS & AJAX calls to load external applications into the main index.html.</span>
+        <br>
+        <p>Keep Scrolling To See Some Apps</p>
+      </div>
+    </section>
+
+    <div class="pimg2">
+      <div class="ptext">
+        <span class="border trans">
+          Create
+        </span>
+      </div>
+    </div>
+
+    <section id='app1' class="section section-dark">
+      <div id='app-1_container' class="u_hide">
+        <div id='app-1_close'>Close Application (all other apps disabled)</div>
+        <!-- ajax load the content from external file -->
+        <div id="app1_AJAX_content"></div>
+      </div>
+      <div id="app-1_text">
+        <a href="#!" id='app-1_button' class="myButton">Show Language Localization</a>
+        <p>This application demonstrates how to change the language in a application. Granted a browser will do the translation
+          for you...but on a desktop application you have to select the language that you want to use. </p>
+        <p>The languages and their translations are coming from a FireBase database.</p>
+        <p>This application is actually loaded using a Fetch() call...its an external html file!</p>
+      </div>
+    </section>
+
+    <div class="pimg3">
+      <div class="ptext">
+        <span class="border trans">
+          Inspire
+        </span>
+      </div>
+    </div>
+
+    <section id='app2' class="section section-dark">
+      <div id='app-2_container' class="u_hide">
+        <div id='app-2_close'>Close Application (all other apps disabled)</div>
+        <!-- ajax load the content from external file -->
+        <div id="app2_AJAX_content"></div>
+      </div>
+      <div id="app-2_text">
+        <a href="#!" id='app-2_button' class="myButton">Show Weather UnderGround</a>
+        <p>This application demonstrates how to make an API call.</p>
+        <p>Using an API from WeatherUnderground we get the weather information for a specific city and display it for the user.
+          The user is able to change the location and that location will be saved to localStorage. Next time the user starts
+          the app the location that was saved is loaded up and displayed.</p>
+        <p>This application is actually loaded using a Fetch() call...its an external html file!</p>
+      </div>
+    </section>
+
+    <div class="pimg4">
+      <div class="ptext">
+        <span class="border trans">
+          forge apes
+        </span>
+      </div>
+    </div>
+
+    <section id="mainFooter" class="section section-dark">
+      <section id="main-footer_social" class="u_hide">
+        <a href="https://github.com/DanielLandonJr" target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-c-landon-jr/" target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/daniel.landonjr" target="_blank">
+          <i class="fab fa-facebook-square fa-2x"></i>
+        </a>
+        <a href="https://twitter.com/MujunKross" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.twitch.tv/maodunkross" target="_blank">
+          <i class="fab fa-twitch fa-2x"></i>
+        </a>
+        <a href="mailto:daniel.landonjr@gmail.com" target="_blank">
+          <i class="fas fa-at fa-2x"></i>
+        </a>
+      </section>
+      <section id="main-footer_copyright">
+        <span>&copy 2018, Daniel C. Landon Jr.</span>
+      </section>
+    </section>
+    <!-- end parallax -->
+
+    <!-- end container -->
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script src="./assets/js/stats.js"></script>
+  <script src="./assets/js/main.js?version=1.5.25" type="module"></script>
+</body>
+
+>>>>>>> master
 </html>
