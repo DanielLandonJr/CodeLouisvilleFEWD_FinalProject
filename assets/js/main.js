@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import * as pc from './polarClock.js?version=1.0.8';
-import * as sm from './sideMenu.js?version=1.0.8';
-import * as lang from './language_main.js?version=1.0.8';
-import * as weather from './weather_main.js?version=1.0.8';
-import * as inWin from './inWindow.js?version=1.0.8';
-=======
 import * as pc from './polarClock.js?version=1.5.30';
 import * as sm from './sideMenu.js?version=1.5.30';
 import * as lang from './language_main.js?version=1.5.30';
 import * as weather from './weather_main.js?version=1.5.30';
 import * as inWin from './inWindow.js?version=1.5.30';
 import * as http from './easyHTTP.js?version=1.5.30';
->>>>>>> master
 
 const ParallaxDesign = (() => {
   const app1_container = document.querySelector('#app-1_container');
@@ -138,38 +130,9 @@ const ParallaxDesign = (() => {
 
       pc.PolarClock.init(300);
 
-<<<<<<< HEAD
-      let myHeaders = new Headers();
-      myHeaders.append('Content-Type', 'text/html');
-
-      let myInit = {
-        method: 'GET',
-        headers: myHeaders,
-        mode: 'no-cors'
-      };
-
-      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/language.html')
-        .then((response) => { return response.text(); })
-        .then((text) => {
-          document.querySelector('#app1_AJAX_content').innerHTML = text;
-          lang.ApplicationLocalization.init();
-        }).catch((error) => {
-          console.error(`Fetch Error =\n`, error);
-        });
-
-      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/weather.html', myInit)
-        .then((response) => { return response.text(); })
-        .then((text) => {
-          document.querySelector('#app2_AJAX_content').innerHTML = text;
-          weather.WeatherUnderground.init();
-        }).catch((error) => {
-          console.error(`Fetch Error =\n`, error);
-        });
-=======
       loadLangaugeApp();
 
       loadWeatherApp();
->>>>>>> master
 
       inWin.InWindow.init();
 
