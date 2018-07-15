@@ -1,0 +1,23 @@
+{
+  "name": "codelouisvillefewd_finalproject",
+  "version": "1.0.0",
+  "description": "Code Louisville Front End Web Development Final Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w assets/sass/ -o assets/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielLandonJr/codelouisvillefewd_finalproject.git"
+  },
+  "author": "Daniel C. Landon Jr.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielLandonJr/codelouisvillefewd_finalproject/issues"
+  },
+  "homepage": "https://github.com/DanielLandonJr/codelouisvillefewd_finalproject#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}

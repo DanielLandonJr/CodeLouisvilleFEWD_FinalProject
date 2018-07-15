@@ -1,0 +1,145 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ side menu start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+#menuButton {
+  position: fixed;
+  top: 5px;
+  left: 10px;
+  z-index: 10;
+  color: $color_3rdComp;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.side-menu {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 600;
+  top: 0px;
+  left: 0px;
+  background-color: $color_primary;
+  opacity: 0.75;
+  overflow: hidden;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-rows: 50px 2fr 190px;
+  grid-template-columns: minmax(1px, 250px);
+  transition: 0.5s;
+}
+
+#side-menu_winston {
+  color: $color_primary-text;
+  font-size: 1.6em;
+  padding: 5px;
+}
+
+#side-menu_links {
+  margin-top: 15px;
+}
+
+#side-menu_stats {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  z-index: 550;
+}
+
+#side-menu_close-arrow {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  color: $color_secondary;
+  transition: 0.5s;
+  z-index: 550;
+}
+
+#side-menu_scroll-down {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 1em;
+  background-color: $color_secondary;
+  color: $color_secondary-text;
+  padding: 5px;
+  opacity: 1;
+  box-shadow: $shadow;
+}
+
+.side-menu_message {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  font-size: 2.7em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 3px;
+  z-index: 550;
+  text-align: right;
+  transition: 0.5s;
+}
+
+.side-menu_close-message {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  text-align: center;
+  font-size: 2.7em;
+  text-transform: uppercase;
+  color: $color_primary-text;
+  padding: 15px;
+  z-index: 550;
+}
+
+#side-menu-back {
+  height: 0vh;
+  width: 0vw;
+  position: fixed;
+  z-index: 500;
+  top: 0px;
+  left: 0px;
+  background-color: #111;
+  opacity: 0.75;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#side-menu a {
+  padding: 10px 10px 10px 15px;
+  text-decoration: none;
+  font-size: 2.2em;
+  color: #fff;
+  display: block;
+  transition: 0.5s;
+}
+
+#side-menu a:hover {
+  color: $color_primary-text;
+  background: $color_primary-light;
+  border-radius: 1em;
+}
+
+.close-side-menu {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 5px 0 5px 0;
+}
+
+.close-side-menu:hover {
+  background: $color_primary-light;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ side menu end ~~~~~~~~~~~~~~~ */
+/*
+
+*/

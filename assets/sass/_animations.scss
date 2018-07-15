@@ -1,0 +1,63 @@
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ animations start ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 
+
+@keyframes scaleButton{
+  0%{
+      }
+  50%{
+      transform: scale(1.25);
+      }
+  100%{
+      transform: rotate(xx) scale(1);
+      }
+}
+
+.scaleOut{
+  // animation: scaleButton 1s infinite 0s ease-in-out;
+  animation-name: scaleButton;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes kf_rotateIn{
+  0%{
+      transform: rotate(0deg) scale(0);
+      opacity: 0;
+      }
+  100%{
+      transform: rotate(-360deg) scale(01);
+      opacity: 1;
+      }
+}
+
+@keyframes kf_rotateOut{
+  0%{
+      transform: rotate(0deg) scale(01);
+      opacity: 1;
+      }
+  100%{
+      transform: rotate(-360deg) scale(0);
+      opacity: 0;
+      }
+}
+
+.rotateIn{
+  animation: kf_rotateIn 2s ease-in-out;
+}
+
+.rotateOut{
+  animation: kf_rotateOut 2s ease-in-out;
+}
+
+/* 
+
+*/ 
+/* ~~~~~~~~~~~~~~~ animations end ~~~~~~~~~~~~~~~ */
+/* 
+
+*/ 

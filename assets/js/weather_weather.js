@@ -1,12 +1,12 @@
-import * as API from './weather_api_KEY.js';
+import * as API from './weather_api_KEY.js?version=1.5.25';
 
 export const Weather = (() => {
   // public methods
   return {
     // fetch the data from weather underground
     getWeather: async (city, state) => {
-      let fetchURL = `https://api.wunderground.com/api/${ API.apiKey() }/conditions/q/${ state }/${ city }.json`;
-      
+      let fetchURL = `http://api.wunderground.com/api/${API.apiKey()}/conditions/q/${state}/${city}.json`;
+
       const response = await fetch(fetchURL);
 
       const responseData = await response.json();
