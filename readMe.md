@@ -16,6 +16,9 @@ This is the final project needed to complete the Code Louisville course. The lan
   - ES6 Modules used throughout JavaScript.
   - Node-SASS used in development.
   - Used AJAX to load Applications dynamically once main index.html was loaded.
+    - Because I am using GitHub Pages to host the site I have to use Absolute pathing for the AJAX loads. 
+    - I modified the code so that it tries the Absolute pathing first and if that fails it tries Relative pathing. 
+    - This allows me to work on the code in testing and allow it to work on the hosting page without making changes to the pathing before deployment.
   - Avoided using external libraries when possible. This is a demonstration of skill.
   - FireBase used for language localization.
   - API call to WeatherUnderground.
@@ -30,7 +33,7 @@ This is the final project needed to complete the Code Louisville course. The lan
 
 ### CSS
 
-- Multiple customs selectors are scatter throught the CSS. I used NODE and installed SASS for the project. Browse project files to see what I did. Not comfortable with SASS setup, need to come up with a "standard" that I like.
+- Multiple customs selectors are scatter throught the CSS. I used NODE and installed SASS for the project. Browse project files to see what I did. (Not comfortable with SASS setup, need to come up with a "standard" that I like).
 
 ### JavaScript
 

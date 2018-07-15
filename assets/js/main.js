@@ -1,8 +1,9 @@
-import * as pc from './polarClock.js?version=1.5.25';
-import * as sm from './sideMenu.js?version=1.5.25';
-import * as lang from './language_main.js?version=1.5.25';
-import * as weather from './weather_main.js?version=1.5.25';
-import * as inWin from './inWindow.js?version=1.5.25';
+import * as pc from './polarClock.js?version=1.5.30';
+import * as sm from './sideMenu.js?version=1.5.30';
+import * as lang from './language_main.js?version=1.5.30';
+import * as weather from './weather_main.js?version=1.5.30';
+import * as inWin from './inWindow.js?version=1.5.30';
+import * as http from './easyHTTP.js?version=1.5.30';
 
 const ParallaxDesign = (() => {
   const app1_container = document.querySelector('#app-1_container');
@@ -13,7 +14,7 @@ const ParallaxDesign = (() => {
   const app2_close = document.querySelector('#app-2_close');
 
   document.addEventListener('DOMContentLoaded', () => {
-    console.warn('JavaScript Loaded ...');
+    console.warn('DOM Loaded ... JavaScript Initialized ...');
   });
 
   const loadEventListeners = () => {
@@ -72,26 +73,55 @@ const ParallaxDesign = (() => {
     }
   };
 
-  // const parallaxImage = () => {
-  //   const imgArr = document.querySelectorAll('.pimg4 img');
+  const loadLangaugeApp = () => {
+    let url = 'https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/language.html';
 
-  //   let xTemp = 0;
+    http.easyHTTP.get(url)
+      .then((response) => {
+        console.warn(`Absolute Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
+        document.querySelector('#app1_AJAX_content').innerHTML = response;
+        lang.ApplicationLocalization.init();
+      })
+      .catch((error) => {
+        console.warn(`Absolute Pathing FAILED TO LAUNCH ... Attempting Relative Pathing ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
 
-  //   imgArr.forEach(element1 => {
-  //     element1.setAttribute("data-index", xTemp += 2);
+        url = '../../assets/includes/language.html';
+        http.easyHTTP.get(url)
+          .then((response) => {
+            console.warn(`Relative Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
+            document.querySelector('#app1_AJAX_content').innerHTML = response;
+            lang.ApplicationLocalization.init();
+          })
+          .catch((error) => {
+            console.warn(`Relative Pathing FAILED TO LAUNCH ...Application WILL NOT WORK ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
+          });
+      });
+  };
 
-  //     element1.addEventListener('mousemove', (element2) => {
-  //       imgArr.forEach(e => {
-  //         let divisor = parseInt(e.getAttribute("data-index"));
-  //         let startX = e.offsetWidth;
-  //         let startY = e.offsetHeight;
+  const loadWeatherApp = () => {
+    let url = 'https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/weather.html';
 
-  //         e.style.left = (((element2.target.screenX / divisor) - element2.clientX) / 3) + 'px';
-  //         e.style.top = (((element2.screenY / divisor) - element2.clientY) / 3) + 'px';
-  //       });
-  //     });
-  //   });
-  // };
+    http.easyHTTP.get(url)
+      .then((response) => {
+        console.warn(`Absolute Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);
+        document.querySelector('#app2_AJAX_content').innerHTML = response;
+        weather.WeatherUnderground.init();
+      })
+      .catch((error) => {
+        console.warn(`Absolute Pathing FAILED TO LAUNCH ... Attempting Relative Pathing ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
+
+        url = '../../assets/includes/weather.html';
+        http.easyHTTP.get(url)
+          .then((response) => {
+            console.warn(`Relative Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);
+            document.querySelector('#app2_AJAX_content').innerHTML = response;
+            weather.WeatherUnderground.init();
+          })
+          .catch((error) => {
+            console.warn(`Relative Pathing FAILED TO LAUNCH ...Application WILL NOT WORK ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
+          });
+      });
+  };
 
   // public methods
   return {
@@ -100,31 +130,13 @@ const ParallaxDesign = (() => {
 
       pc.PolarClock.init(300);
 
-      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/language.html')
-        .then((response) => { return response.text(); })
-        .then((text) => {
-          document.querySelector('#app1_AJAX_content').innerHTML = text;
-          lang.ApplicationLocalization.init();
-        }).catch((error) => {
-          console.error(`Fetch Error =\n`, error);
-        });
+      loadLangaugeApp();
 
-      fetch('https://daniellandonjr.github.io/CodeLouisvilleFEWD_FinalProject/assets/includes/weather.html')
-        .then((response) => { return response.text(); })
-        .then((text) => {
-          document.querySelector('#app2_AJAX_content').innerHTML = text;
-          weather.WeatherUnderground.init();
-        }).catch((error) => {
-          console.error(`Fetch Error =\n`, error);
-        });
-
-      // particles.ParticleSetup.init();
+      loadWeatherApp();
 
       inWin.InWindow.init();
 
       loadEventListeners();
-
-      // parallaxImage();
     }
   }
 })();
