@@ -1,18 +1,11 @@
-import * as pc from './polarClock.js?version=1.5.30';
-import * as sm from './sideMenu.js?version=1.5.30';
-import * as lang from './language_main.js?version=1.5.30';
-import * as weather from './weather_main.js?version=1.5.30';
-import * as inWin from './inWindow.js?version=1.5.30';
-import * as http from './easyHTTP.js?version=1.5.30';
+import * as pc from './polarClock.js?version=1.5.35';
+import * as sm from './sideMenu.js?version=1.5.35';
+import * as lang from './language_main.js?version=1.5.35';
+import * as weather from './weather_main.js?version=1.5.35';
+import * as inWin from './inWindow.js?version=1.5.35';
+import * as http from './easyHTTP.js?version=1.5.35';
 
 const ParallaxDesign = (() => {
-  const app1_container = document.querySelector('#app-1_container');
-  const app2_container = document.querySelector('#app-2_container');
-  const app1_button = document.querySelector('#app-1_button');
-  const app1_close = document.querySelector('#app-1_close');
-  const app2_button = document.querySelector('#app-2_button');
-  const app2_close = document.querySelector('#app-2_close');
-
   document.addEventListener('DOMContentLoaded', () => {
     console.warn('DOM Loaded ... JavaScript Initialized ...');
   });
@@ -22,24 +15,24 @@ const ParallaxDesign = (() => {
       document.querySelector('.card').classList.add('u_hide');
     })
 
-    app1_button.addEventListener('click', toggleApp1);
-    app1_close.addEventListener('click', toggleApp1);
+    document.querySelector('#app-1_button').addEventListener('click', toggleApp1);
+    document.querySelector('#app-1_close').addEventListener('click', toggleApp1);
 
-    app2_button.addEventListener('click', toggleApp2);
-    app2_close.addEventListener('click', toggleApp2);
+    document.querySelector('#app-2_button').addEventListener('click', toggleApp2);
+    document.querySelector('#app-2_close').addEventListener('click', toggleApp2);
   };
 
   const toggleApp1 = (even) => {
-    if (app1_container.className === 'u_hide') {
-      app1_container.classList.remove('u_hide');
-      app1_container.classList.add('rotateIn');
+    if (document.querySelector('#app-1_container').className === 'u_hide') {
+      document.querySelector('#app-1_container').classList.remove('u_hide');
+      document.querySelector('#app-1_container').classList.add('rotateIn');
     } else {
-      app1_container.classList.remove('rotateIn');
-      app1_container.classList.add('rotateOut');
+      document.querySelector('#app-1_container').classList.remove('rotateIn');
+      document.querySelector('#app-1_container').classList.add('rotateOut');
 
       setTimeout(() => {
-        app1_container.classList.remove('rotateOut');
-        app1_container.classList.add('u_hide');
+        document.querySelector('#app-1_container').classList.remove('rotateOut');
+        document.querySelector('#app-1_container').classList.add('u_hide');
       }, 2000);
     }
 
@@ -47,16 +40,16 @@ const ParallaxDesign = (() => {
   };
 
   const toggleApp2 = () => {
-    if (app2_container.className === 'u_hide') {
-      app2_container.classList.remove('u_hide');
-      app2_container.classList.add('rotateIn');
+    if (document.querySelector('#app-2_container').className === 'u_hide') {
+      document.querySelector('#app-2_container').classList.remove('u_hide');
+      document.querySelector('#app-2_container').classList.add('rotateIn');
     } else {
-      app2_container.classList.remove('rotateIn');
-      app2_container.classList.add('rotateOut');
+      document.querySelector('#app-2_container').classList.remove('rotateIn');
+      document.querySelector('#app-2_container').classList.add('rotateOut');
 
       setTimeout(() => {
-        app2_container.classList.remove('rotateOut');
-        app2_container.classList.add('u_hide');
+        document.querySelector('#app-2_container').classList.remove('rotateOut');
+        document.querySelector('#app-2_container').classList.add('u_hide');
       }, 2000);
     }
 
@@ -64,12 +57,12 @@ const ParallaxDesign = (() => {
   };
 
   const toggleAppButtons = () => {
-    if (app1_button.style.display === 'none') {
-      app1_button.style.display = 'inline-block';
-      app2_button.style.display = 'inline-block';
+    if (document.querySelector('#app-1_button').style.display === 'none') {
+      document.querySelector('#app-1_button').style.display = 'inline-block';
+      document.querySelector('#app-2_button').style.display = 'inline-block';
     } else {
-      app1_button.style.display = 'none';
-      app2_button.style.display = 'none';
+      document.querySelector('#app-1_button').style.display = 'none';
+      document.querySelector('#app-2_button').style.display = 'none';
     }
   };
 

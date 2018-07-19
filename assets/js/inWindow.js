@@ -1,12 +1,4 @@
 export const InWindow = (() => {
-  const app_1_button = document.querySelector('#app-1_button');
-  const app_2_button = document.querySelector('#app-2_button');
-
-  const polarClock = document.querySelector('#myCanvas');
-
-  const mainFooter = document.querySelector('#mainFooter');
-  const footer_social = document.querySelector('#main-footer_social');
-
   // minimum size to watch for
   const minThreshold = 0.0;
   // max size, in this case 75%
@@ -25,10 +17,10 @@ export const InWindow = (() => {
     observer = new IntersectionObserver(handleIntersect, options);
 
     // list of tags that i want to watch for
-    observer.observe(app_1_button);
-    observer.observe(app_2_button);
-    observer.observe(polarClock);
-    observer.observe(mainFooter);
+    observer.observe(document.querySelector('#app-1_button'));
+    observer.observe(document.querySelector('#app-2_button'));
+    observer.observe(document.querySelector('#myCanvas'));
+    observer.observe(document.querySelector('#mainFooter'));
   };
 
   const handleIntersect = (entries, observer) => {
@@ -43,8 +35,8 @@ export const InWindow = (() => {
           // look to see if its the main footer_social, we want to add additional animation to a part of it
           if (entry.target.id === 'mainFooter') {
             // main footer showing so rotate in social list
-            footer_social.classList.add('rotateIn');
-            footer_social.classList.remove('u_hide');
+            document.querySelector('#main-footer_social').classList.add('rotateIn');
+            document.querySelector('#main-footer_social').classList.remove('u_hide');
           } else {
             // everything else
             entry.target.classList.add('scaleOut');
@@ -58,8 +50,8 @@ export const InWindow = (() => {
           // again check for main footer_social, extra stuff to clear
           if (entry.target.id === 'mainFooter') {
             // main footer showing so rotate in social list
-            footer_social.classList.remove('rotateIn');
-            footer_social.classList.add('u_hide');
+            document.querySelector('#main-footer_social').classList.remove('rotateIn');
+            document.querySelector('#main-footer_social').classList.add('u_hide');
           } else {
             // everything else
             entry.target.classList.remove('scaleOut');

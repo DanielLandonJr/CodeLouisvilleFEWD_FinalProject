@@ -1,6 +1,6 @@
 export const PolarClock = (() => {
   const canvas = document.querySelector('#myCanvas');
-  const ctx = canvas.getContext('2d');
+  const ctx = document.querySelector('#myCanvas').getContext('2d');
   let canvasSize = 0;
 
   const daysFull = { 1: 'Sunday', 2: 'Monday', 3: 'Tuesday', 4: 'Wednesday', 5: 'Thursday', 6: 'Friday', 7: 'Saturday' };

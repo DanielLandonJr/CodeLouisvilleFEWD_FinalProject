@@ -1,4 +1,4 @@
-import * as UI_Ctrl from './language_ui.js?version=1.5.25';
+import * as UI_Ctrl from './language_ui.js?version=1.5.35';
 
 export const ApplicationLocalization = (() => {
   let frontMatter = '';

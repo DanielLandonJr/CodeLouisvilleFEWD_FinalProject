@@ -1,12 +1,4 @@
 export const UI = (() => {
-  let languages = document.querySelector('#languages');
-  let defaultLanguage = document.querySelector('#default');
-  let translations = document.querySelector('#translations');
-  let characters = document.querySelector('#characters');
-
-  let loadData = document.querySelector('#loadData');
-  let chooseLanguage = document.querySelector('#chooseLanguage');
-
   // public methods
   return {
     loadUI: () => {
