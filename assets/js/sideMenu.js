@@ -1,7 +1,5 @@
 export const SideMenu = (() => {
-
-  const sideMenuOverlay = document.querySelector('#side-menu-back');
-  sideMenuOverlay.style.height = '0vh';
+  document.querySelector('#side-menu-back').style.height = '0vh';
 
   const loadEventListeners = () => {
     // open or close the side menu depending on what state it is in
@@ -45,11 +43,11 @@ export const SideMenu = (() => {
 
   const toggleSideMenu = () => {
     // alert('click');
-    if (sideMenuOverlay.style.height === '0vh') {
+    if (document.querySelector('#side-menu-back').style.height === '0vh') {
       // overlay is hidden so show it and the menu
       document.querySelector('#side-menu').style.width = '250px';
-      sideMenuOverlay.style.height = '100vh';
-      sideMenuOverlay.style.width = '100vw';
+      document.querySelector('#side-menu-back').style.height = '100vh';
+      document.querySelector('#side-menu-back').style.width = '100vw';
 
       // reflow(document.querySelector('#particles-js'));
 
@@ -57,8 +55,8 @@ export const SideMenu = (() => {
     } else {
       // hide overlay and menu
       document.querySelector('#side-menu').style.width = '0';
-      sideMenuOverlay.style.height = '0vh';
-      sideMenuOverlay.style.width = '0vw';
+      document.querySelector('#side-menu-back').style.height = '0vh';
+      document.querySelector('#side-menu-back').style.width = '0vw';
       document.querySelector('#side-menu_close-arrow').style.left = '0px';
     }
   };
