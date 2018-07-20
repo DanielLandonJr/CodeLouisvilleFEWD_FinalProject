@@ -71,13 +71,16 @@ export const SideMenu = (() => {
     let canvasHeight = 512;
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
+    canvas.style.position = 'absolute';
+    canvas.style.top = `calc(50% - ${canvasHeight / 2}px)`;
+    canvas.style.right = `calc(50% - ${canvasWidth / 2}px)`;
 
-    canvas.style = `
-    position:absolute;
-    top: calc(50% - ${canvasHeight / 2}px);
-    right: calc(50% - ${canvasWidth / 2}px);
-    transition: 0.5s;
-    `;
+    // canvas.style = `
+    // position:absolute;
+    // top: calc(50% - ${canvasHeight / 2}px);
+    // right: calc(50% - ${canvasWidth / 2}px);
+    // transition: 0.5s;
+    // `;
 
     document.querySelector('#stats-graphic').appendChild(canvas);
     let context = canvas.getContext('2d');
