@@ -64,7 +64,10 @@ export const InWindow = (() => {
   // public
   return {
     init: () => {
-      createObserver();
+      // createObserver();
+
+      // main footer showing so rotate in social list
+      document.querySelector('#main-footer_social').classList.remove('u_hide');
     }
   }
 })();
