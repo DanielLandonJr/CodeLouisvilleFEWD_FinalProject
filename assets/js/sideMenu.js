@@ -49,8 +49,6 @@ export const SideMenu = (() => {
       document.querySelector('#side-menu-back').style.height = '100vh';
       document.querySelector('#side-menu-back').style.width = '100vw';
 
-      // reflow(document.querySelector('#particles-js'));
-
       document.querySelector('#side-menu_close-arrow').style.left = '265px';
     } else {
       // hide overlay and menu

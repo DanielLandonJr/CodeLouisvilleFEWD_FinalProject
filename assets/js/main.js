@@ -1,9 +1,9 @@
-import * as pc from './polarClock.js?version=1.5.5';
-import * as sm from './sideMenu.js?version=1.5.5';
-import * as lang from './language_main.js?version=1.5.5';
-import * as weather from './weather_main.js?version=1.5.5';
-import * as inWin from './inWindow.js?version=1.5.5';
-import * as http from './easyHTTP.js?version=1.5.5';
+import * as pc from './polarClock.js?version=1.6.0';
+import * as sm from './sideMenu.js?version=1.6.0';
+import * as lang from './language_main.js?version=1.6.0';
+import * as weather from './weather_main.js?version=1.6.0';
+import * as inWin from './inWindow.js?version=1.6.0';
+import * as http from './easyHTTP.js?version=1.6.0';
 
 const ParallaxDesign = (() => {
   document.addEventListener('DOMContentLoaded', () => {
@@ -78,7 +78,7 @@ const ParallaxDesign = (() => {
       .catch((error) => {
         console.warn(`Absolute Pathing FAILED TO LAUNCH ... Attempting Relative Pathing ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
 
-        url = '../../assets/includes/language.html?version=1.5.5';
+        url = '../../assets/includes/language.html?version=1.6.0';
         http.easyHTTP.get(url)
           .then((response) => {
             // console.warn(`Relative Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
@@ -103,7 +103,7 @@ const ParallaxDesign = (() => {
       .catch((error) => {
         console.warn(`Absolute Pathing FAILED TO LAUNCH ... Attempting Relative Pathing ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
 
-        url = '../../assets/includes/weather.html?version=1.5.5';
+        url = '../../assets/includes/weather.html?version=1.6.0';
         http.easyHTTP.get(url)
           .then((response) => {
             // console.warn(`Relative Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);

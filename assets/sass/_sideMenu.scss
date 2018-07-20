@@ -26,12 +26,12 @@
   left: 0px;
   background-color: $color_primary;
   opacity: 0.75;
-  overflow: hidden;
   display: grid;
   grid-gap: 5px;
-  grid-template-rows: 50px 2fr 190px;
+  grid-template-rows: 50px 1fr 225px;
   grid-template-columns: minmax(1px, 250px);
   transition: 0.5s;
+  overflow-x: auto;
 }
 
 #side-menu_winston {
