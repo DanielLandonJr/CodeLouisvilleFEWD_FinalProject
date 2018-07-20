@@ -820,11 +820,15 @@ img {
   width: 48px;
   height: 48px;
   cursor: pointer;
-  margin-left: 80px;
+  margin-left: 101px;
   padding: 5px 0 5px 0; }
 
 .close-side-menu:hover {
   background: #9a67ea; }
+
+#monkey_message {
+  text-align: center;
+  color: #fff; }
 
 /* 
 
