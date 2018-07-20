@@ -817,8 +817,8 @@ img {
   border-radius: 1em; }
 
 .close-side-menu {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
   margin-left: 100px;
   padding: 5px 0 5px 0; }
