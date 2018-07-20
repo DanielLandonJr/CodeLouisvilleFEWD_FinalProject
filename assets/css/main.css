@@ -817,10 +817,10 @@ img {
   border-radius: 1em; }
 
 .close-side-menu {
-  width: 112px;
-  height: 112px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
-  margin-left: 89px;
+  margin-left: 80px;
   padding: 5px 0 5px 0; }
 
 .close-side-menu:hover {
