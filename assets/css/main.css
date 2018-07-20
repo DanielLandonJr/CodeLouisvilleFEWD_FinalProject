@@ -940,9 +940,6 @@ img {
   .border {
     padding: 10px;
     opacity: 1; }
-  #side-menu a {
-    padding: 5px 5px 5px 7.5px;
-    transition: 0.5s; }
   #weather_location-information,
   #weather_location-buttons {
     grid-template-columns: 1fr;
