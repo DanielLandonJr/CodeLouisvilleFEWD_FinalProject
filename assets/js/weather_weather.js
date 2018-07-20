@@ -1,4 +1,4 @@
-import * as API from './weather_api_KEY.js?version=1.5.5';
+import * as API from './weather_api_KEY.js?version=1.6.0';
 
 export const Weather = (() => {
   // public methods
