@@ -64,7 +64,12 @@ export const InWindow = (() => {
   // public
   return {
     init: () => {
+      // comment this out due to safari
       createObserver();
+
+      // apple safari does not support this api at this time so we need to disable
+      // unhide footer social
+      document.querySelector('#main-footer_social').classList.remove('u_hide');
     }
   }
 })();
