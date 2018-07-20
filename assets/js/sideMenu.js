@@ -113,7 +113,7 @@ export const SideMenu = (() => {
   // public methods
   return {
     init: () => {
-      setupStatGraphic();
+      // setupStatGraphic();
 
       loadEventListeners();
     }
