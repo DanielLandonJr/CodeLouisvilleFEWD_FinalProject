@@ -1,13 +1,13 @@
-import * as pc from './polarClock.js?version=1.5.35';
-import * as sm from './sideMenu.js?version=1.5.35';
-import * as lang from './language_main.js?version=1.5.35';
-import * as weather from './weather_main.js?version=1.5.35';
-import * as inWin from './inWindow.js?version=1.5.35';
-import * as http from './easyHTTP.js?version=1.5.35';
+import * as pc from './polarClock.js?version=1.5.5';
+import * as sm from './sideMenu.js?version=1.5.5';
+import * as lang from './language_main.js?version=1.5.5';
+import * as weather from './weather_main.js?version=1.5.5';
+import * as inWin from './inWindow.js?version=1.5.5';
+import * as http from './easyHTTP.js?version=1.5.5';
 
 const ParallaxDesign = (() => {
   document.addEventListener('DOMContentLoaded', () => {
-    console.warn('DOM Loaded ... JavaScript Initialized ...');
+    // console.warn('DOM Loaded ... JavaScript Initialized ...');
   });
 
   const loadEventListeners = () => {
@@ -71,22 +71,22 @@ const ParallaxDesign = (() => {
 
     http.easyHTTP.get(url)
       .then((response) => {
-        console.warn(`Absolute Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
+        // console.warn(`Absolute Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
         document.querySelector('#app1_AJAX_content').innerHTML = response;
         lang.ApplicationLocalization.init();
       })
       .catch((error) => {
         console.warn(`Absolute Pathing FAILED TO LAUNCH ... Attempting Relative Pathing ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
 
-        url = '../../assets/includes/language.html';
+        url = '../../assets/includes/language.html?version=1.5.5';
         http.easyHTTP.get(url)
           .then((response) => {
-            console.warn(`Relative Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
+            // console.warn(`Relative Pathing SUCCESS ... Language Localization Application Loaded \nURL Attempted => '${url}'`);
             document.querySelector('#app1_AJAX_content').innerHTML = response;
             lang.ApplicationLocalization.init();
           })
           .catch((error) => {
-            console.warn(`Relative Pathing FAILED TO LAUNCH ...Application WILL NOT WORK ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
+            console.warn(`Relative Pathing FAILED TO LAUNCH ... Language Localization Application WILL NOT WORK ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
           });
       });
   };
@@ -96,22 +96,22 @@ const ParallaxDesign = (() => {
 
     http.easyHTTP.get(url)
       .then((response) => {
-        console.warn(`Absolute Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);
+        // console.warn(`Absolute Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);
         document.querySelector('#app2_AJAX_content').innerHTML = response;
         weather.WeatherUnderground.init();
       })
       .catch((error) => {
         console.warn(`Absolute Pathing FAILED TO LAUNCH ... Attempting Relative Pathing ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
 
-        url = '../../assets/includes/weather.html';
+        url = '../../assets/includes/weather.html?version=1.5.5';
         http.easyHTTP.get(url)
           .then((response) => {
-            console.warn(`Relative Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);
+            // console.warn(`Relative Pathing SUCCESS ... Weather Underground Application Loaded \nURL Attempted => '${url}'`);
             document.querySelector('#app2_AJAX_content').innerHTML = response;
             weather.WeatherUnderground.init();
           })
           .catch((error) => {
-            console.warn(`Relative Pathing FAILED TO LAUNCH ...Application WILL NOT WORK ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
+            console.warn(`Relative Pathing FAILED TO LAUNCH ... Weather Underground Application WILL NOT WORK ... \nURL Attempted => '${url}'\nReturned Error => ${error}`);
           });
       });
   };

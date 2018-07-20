@@ -64,12 +64,15 @@ export const InWindow = (() => {
   // public
   return {
     init: () => {
-      // comment this out due to safari
-      // createObserver();
+      if (typeof IntersectionObserver === 'function') {
+        createObserver();
+      }
+      else {
+        // certain browsers do not support this so dont run it just remove hide class from footer
+        console.warn('Browser DOES NOT Support IntersectionObserver\nisInViewPort Disabled...Certain Animations WILL NOT Work!')
 
-      // apple safari does not support this api at this time so we need to disable
-      // unhide footer social
-      document.querySelector('#main-footer_social').classList.remove('u_hide');
+        document.querySelector('#main-footer_social').classList.remove('u_hide');
+      }
     }
   }
 })();
