@@ -69,6 +69,7 @@ export const SideMenu = (() => {
     let canvas = document.createElement('canvas');
     let canvasWidth = 512;
     let canvasHeight = 512;
+    canvas.id = "stat_canvas"
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
 
