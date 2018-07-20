@@ -69,19 +69,15 @@ export const SideMenu = (() => {
     let canvas = document.createElement('canvas');
     let canvasWidth = 512;
     let canvasHeight = 512;
-    canvas.id = "stat_canvas"
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
-    canvas.style.position = 'absolute';
-    canvas.style.top = canvasHeight / 2;
-    canvas.style.right = canvasWidth / 2;
 
-    // canvas.style = `
-    // position:absolute;
-    // top: calc(50% - ${canvasHeight / 2}px);
-    // right: calc(50% - ${canvasWidth / 2}px);
-    // transition: 0.5s;
-    // `;
+    canvas.style = `
+    position:absolute;
+    top: calc(50% - ${canvasHeight / 2}px);
+    right: calc(50% - ${canvasWidth / 2}px);
+    transition: 0.5s;
+    `;
 
     document.querySelector('#stats-graphic').appendChild(canvas);
     let context = canvas.getContext('2d');
