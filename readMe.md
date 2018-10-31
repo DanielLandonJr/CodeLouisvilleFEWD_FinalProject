@@ -1,4 +1,6 @@
-# Code Louisville Front End Web Development Final Project, May 2018 Course
+# HTML5, CSS3, JavaScript (ES6) Code Demonstrator
+
+## This project was used as the final project for Code Louisville Front End Web Development Final Project, May 2018 Course
 
 ---
 
